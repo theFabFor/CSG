@@ -33,7 +33,13 @@ $('.navbar-collapse ul li a').click(function() {
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
 
+// variable to contain info window of annexArea
+var infoWindow;
+var AnnexAreaInfoWindow;
+
 function init() {
+    //location of infoWindow
+    var myLatlng = new google.maps.LatLng(40.330851, -104.896860);
     // variables to contain map overlays
     var annexArea;
 
@@ -207,7 +213,19 @@ function init() {
     annexArea.setMap(map);
 
     // Add a listener for the click event.
-    google.maps.event.addListener(annexArea, 'click', annexAreaInfoWindow);
+    //google.maps.event.addListener(annexArea, 'click', AnnexAreaInfoWindow);
 
-    infoWindow = new google.maps.InfoWindow();
+  var contentString = 'this is the annexed piece';
+
+    var AnnexAreaInfoWindow = new google.maps.InfoWindow({
+        content: 'contentString',
+        position: (event.latLng)
+    });
+
+  google.maps.event.addListener(annexArea, 'click', function(event) {
+    AnnexAreaInfoWindow.open(map);
+    AnnexAreaInfoWindow.setPosition(event.latLng);
+  });
 }
+
+google.maps.event.addDomListener(window, 'load', init);
