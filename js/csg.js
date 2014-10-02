@@ -176,309 +176,47 @@ function init() {
     // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
 
-    // Define the LatLng coordinates for the rrTrack 1 polyline.
-    var rrTrack1Coords = [
-        new google.maps.LatLng(40.3321615,-104.88966380000001),
-        new google.maps.LatLng(40.3321717,-104.8913187),
-        new google.maps.LatLng(40.3321737,-104.8915306),
-        new google.maps.LatLng(40.3321676,-104.8916593),
-        new google.maps.LatLng(40.3321615,-104.8917666),
-        new google.maps.LatLng(40.3321492,-104.8919088),
-        new google.maps.LatLng(40.3321022,-104.8923513),
-        new google.maps.LatLng(40.3320899,-104.8924693),
-        new google.maps.LatLng(40.3320858,-104.8925927),
-        new google.maps.LatLng(40.3320858,-104.8927188),
-        new google.maps.LatLng(40.3320858,-104.8928073),
-        new google.maps.LatLng(40.3321063,-104.8945239),
-        new google.maps.LatLng(40.3321083,-104.89476260000002),
-        new google.maps.LatLng(40.3321144,-104.8949262),
-        new google.maps.LatLng(40.3321287,-104.89506840000001),
-        new google.maps.LatLng(40.332139,-104.8951569),
-        new google.maps.LatLng(40.3321574,-104.8952374),
-        new google.maps.LatLng(40.3321819,-104.8953366),
-        new google.maps.LatLng(40.3322126,-104.8954439),
-        new google.maps.LatLng(40.3322473,-104.8955378),
-        new google.maps.LatLng(40.33228,-104.8956156),
-        new google.maps.LatLng(40.3323046,-104.8956558),
-        new google.maps.LatLng(40.3323455,-104.89572820000001),
-        new google.maps.LatLng(40.3323741,-104.8957711),
-        new google.maps.LatLng(40.3324252,-104.89584360000002),
-        new google.maps.LatLng(40.3339342,-104.8977023),
-        new google.maps.LatLng(40.3340303,-104.8978338),
-        new google.maps.LatLng(40.3341223,-104.8979625),
-        new google.maps.LatLng(40.3342245,-104.89811),
-        new google.maps.LatLng(40.3342961,-104.8982415),
-        new google.maps.LatLng(40.3343676,-104.8984158),
-        new google.maps.LatLng(40.33443100000001,-104.8985767),
-        new google.maps.LatLng(40.3344821,-104.8987269),
-        new google.maps.LatLng(40.3345189,-104.8988798),
-        new google.maps.LatLng(40.3345373,-104.8989925),
-        new google.maps.LatLng(40.3345557,-104.8991373),
-        new google.maps.LatLng(40.33457,-104.8992634),
-        new google.maps.LatLng(40.3345762,-104.8993948)
+    // Define the LatLng coordinates for the railYard polygon.
+    var railYardCoords = [
+        new google.maps.LatLng(40.3321676,-104.8951328),
+        new google.maps.LatLng(40.3328566,-104.8948967),
+        new google.maps.LatLng(40.3329834,-104.894878),
+        new google.maps.LatLng(40.3330754,-104.8948485),
+        new google.maps.LatLng(40.3336663,-104.8945454),
+        new google.maps.LatLng(40.333742,-104.8944783),
+        new google.maps.LatLng(40.3338197,-104.8943442),
+        new google.maps.LatLng(40.3338565,-104.8943415),
+        new google.maps.LatLng(40.33389739999999,-104.8966992),
+        new google.maps.LatLng(40.3339076,-104.8968548),
+        new google.maps.LatLng(40.333926,-104.897005),
+        new google.maps.LatLng(40.3339648,-104.8971847),
+        new google.maps.LatLng(40.3339955,-104.8973161),
+        new google.maps.LatLng(40.3340446,-104.8974904),
+        new google.maps.LatLng(40.334128400000004,-104.8976943),
+        new google.maps.LatLng(40.3342061,-104.8978767),
+        new google.maps.LatLng(40.3342879,-104.8980698),
+        new google.maps.LatLng(40.334255199999994,-104.8981073),
+        new google.maps.LatLng(40.33415500000001,-104.8979437),
+        new google.maps.LatLng(40.334079300000006,-104.8978311),
+        new google.maps.LatLng(40.33327370000001,-104.8968521),
+        new google.maps.LatLng(40.3324314,-104.8958087),
+        new google.maps.LatLng(40.3323312,-104.8956504),
+        new google.maps.LatLng(40.33225960000001,-104.8954895),
+        new google.maps.LatLng(40.332224800000006,-104.8953849),
+        new google.maps.LatLng(40.332184,-104.8952374)
     ];
 
-    // Construct the rrTrack 1 polyline.
-    rrTrack1 = new google.maps.Polyline({
-        path: rrTrack1Coords,
-        strokeColor: '#FF0000',
+    // Construct the railYard polygon.
+    railYard = new google.maps.Polygon({
+        paths: railYardCoords,
+        strokeColor: '#999933',
         strokeOpacity: 0.8,
         strokeWeight: 1,
+        fillColor: '#999933',
+        fillOpacity: 0.35
     });
 
-    rrTrack1.setMap(map);
-
-    // Define the LatLng coordinates for the rrTrack 2 polyline.
-    var rrTrack2Coords = [
-        new google.maps.LatLng(40.3321063,-104.8944864),
-        new google.maps.LatLng(40.3321134,-104.8946004),
-        new google.maps.LatLng(40.3321216,-104.8947251),
-        new google.maps.LatLng(40.332139,-104.8948538),
-        new google.maps.LatLng(40.3321635,-104.895004),
-        new google.maps.LatLng(40.3321921,-104.8951381),
-        new google.maps.LatLng(40.3322269,-104.8952562),
-        new google.maps.LatLng(40.332267800000004,-104.89537020000002),
-        new google.maps.LatLng(40.3323046,-104.8954506),
-        new google.maps.LatLng(40.3323475,-104.8955271),
-        new google.maps.LatLng(40.3324068,-104.89561290000002),
-        new google.maps.LatLng(40.3325683,-104.8958422),
-        new google.maps.LatLng(40.332688,-104.8959965),
-        new google.maps.LatLng(40.3339566,-104.8975696),
-        new google.maps.LatLng(40.3340149,-104.89764470000001),
-        new google.maps.LatLng(40.3340722,-104.8977198),
-        new google.maps.LatLng(40.3341243,-104.8978029),
-        new google.maps.LatLng(40.334173400000005,-104.8978887),
-        new google.maps.LatLng(40.3342194,-104.8979706),
-        new google.maps.LatLng(40.3342552,-104.898043),
-        new google.maps.LatLng(40.334294,-104.8981288),
-        new google.maps.LatLng(40.3343349,-104.8982254),
-        new google.maps.LatLng(40.3343737,-104.8983233),
-        new google.maps.LatLng(40.33440850000001,-104.8984158),
-        new google.maps.LatLng(40.3344382,-104.8985083),
-        new google.maps.LatLng(40.3344637,-104.8986049),
-        new google.maps.LatLng(40.3344934,-104.8987135),
-        new google.maps.LatLng(40.3345107,-104.8988114),
-        new google.maps.LatLng(40.3345271,-104.8989174),
-        new google.maps.LatLng(40.3345373,-104.8989925)
-    ];
-
-    // Construct the rrTrack 2 polyline.
-    rrTrack2 = new google.maps.Polyline({
-        path: rrTrack2Coords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-    });
-
-    rrTrack2.setMap(map);
-
-    // Define the LatLng coordinates for the rrTrack 3 polyline.
-    var rrTrack3Coords = [
-        new google.maps.LatLng(40.3321482,-104.8931412),
-        new google.maps.LatLng(40.3321645,-104.8945105),
-        new google.maps.LatLng(40.3321707,-104.8946527),
-        new google.maps.LatLng(40.3321819,-104.89478950000002),
-        new google.maps.LatLng(40.3322013,-104.8949155),
-        new google.maps.LatLng(40.3322248,-104.8950416),
-        new google.maps.LatLng(40.3322545,-104.895165),
-        new google.maps.LatLng(40.3322862,-104.8952709),
-        new google.maps.LatLng(40.33233010000001,-104.8953769),
-        new google.maps.LatLng(40.3323915,-104.895511),
-        new google.maps.LatLng(40.3324549,-104.8956491),
-        new google.maps.LatLng(40.3325142,-104.8957524),
-        new google.maps.LatLng(40.3325683,-104.8958422)
-    ];
-
-    // Construct the rrTrack 3 polyline.
-    rrTrack3 = new google.maps.Polyline({
-        path: rrTrack3Coords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-    });
-
-    rrTrack3.setMap(map);
-
-    // Define the LatLng coordinates for the rrTrack 4 polyline.
-    var rrTrack4Coords = [
-        new google.maps.LatLng(40.332554,-104.89537020000002),
-        new google.maps.LatLng(40.3325765,-104.8954788),
-        new google.maps.LatLng(40.3326031,-104.8955821),
-        new google.maps.LatLng(40.3326348,-104.895688),
-        new google.maps.LatLng(40.3326644,-104.8957752),
-        new google.maps.LatLng(40.332700200000005,-104.8958637),
-        new google.maps.LatLng(40.3327411,-104.8959509),
-        new google.maps.LatLng(40.3327922,-104.8960488),
-        new google.maps.LatLng(40.3328393,-104.8961319),
-        new google.maps.LatLng(40.3328894,-104.8962164),
-        new google.maps.LatLng(40.3329323,-104.89628880000001),
-        new google.maps.LatLng(40.3329814,-104.8963626)
-    ];
-
-    // Construct the rrTrack 4 polyline.
-    rrTrack4 = new google.maps.Polyline({
-        path: rrTrack4Coords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-    });
-
-    rrTrack4.setMap(map);
-
-    // Define the LatLng coordinates for the rrTrack 5 polyline.
-    var rrTrack5Coords = [
-        new google.maps.LatLng(40.3326706,-104.8949879),
-        new google.maps.LatLng(40.3326726,-104.8951462),
-        new google.maps.LatLng(40.3326839,-104.8952763),
-        new google.maps.LatLng(40.3326972,-104.8953728),
-        new google.maps.LatLng(40.3327196,-104.8954989),
-        new google.maps.LatLng(40.3327452,-104.8956142),
-        new google.maps.LatLng(40.3327697,-104.8957095),
-        new google.maps.LatLng(40.3328025,-104.8958234),
-        new google.maps.LatLng(40.3328311,-104.8959066),
-        new google.maps.LatLng(40.3328679,-104.8960125),
-        new google.maps.LatLng(40.3329047,-104.8961024),
-        new google.maps.LatLng(40.3329486,-104.896199),
-        new google.maps.LatLng(40.3329947,-104.8962834),
-        new google.maps.LatLng(40.33304580000001,-104.896376),
-        new google.maps.LatLng(40.3330938,-104.8964605),
-        new google.maps.LatLng(40.3331429,-104.8965463),
-        new google.maps.LatLng(40.333193,-104.8966241)
-    ];
-
-    // Construct the rrTrack 5 polyline.
-    rrTrack5 = new google.maps.Polyline({
-        path: rrTrack5Coords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-    });
-
-    rrTrack5.setMap(map);
-
-    // Define the LatLng coordinates for the rrTrack 6 polyline.
-    var rrTrack6Coords = [
-        new google.maps.LatLng(40.3329865,-104.8949946),
-        new google.maps.LatLng(40.3330171,-104.8951623),
-        new google.maps.LatLng(40.3330989,-104.8956276),
-        new google.maps.LatLng(40.3331214,-104.8957309),
-        new google.maps.LatLng(40.333147,-104.8958395),
-        new google.maps.LatLng(40.3331725,-104.8959307),
-        new google.maps.LatLng(40.3332124,-104.8960474),
-        new google.maps.LatLng(40.3332472,-104.8961319),
-        new google.maps.LatLng(40.33328190000001,-104.8962097),
-        new google.maps.LatLng(40.3339137,-104.8974489),
-        new google.maps.LatLng(40.3339607,-104.897532),
-        new google.maps.LatLng(40.3340067,-104.8976085),
-        new google.maps.LatLng(40.3340967,-104.8977587)
-    ];
-
-    // Construct the rrTrack 6 polyline.
-    rrTrack6 = new google.maps.Polyline({
-        path: rrTrack6Coords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-    });
-
-    rrTrack6.setMap(map);
-
-    // Define the LatLng coordinates for the rrTrack 7 polyline.
-    var rrTrack7Coords = [
-        new google.maps.LatLng(40.3332727,-104.8939794),
-        new google.maps.LatLng(40.3332952,-104.8954774),
-        new google.maps.LatLng(40.3333013,-104.8955968),
-        new google.maps.LatLng(40.3333116,-104.8957054),
-        new google.maps.LatLng(40.3333259,-104.895802),
-        new google.maps.LatLng(40.3333422,-104.8958865),
-        new google.maps.LatLng(40.3333698,-104.8959924),
-        new google.maps.LatLng(40.3334015,-104.8960997),
-        new google.maps.LatLng(40.3334322,-104.8961923),
-        new google.maps.LatLng(40.3334772,-104.89630490000002),
-        new google.maps.LatLng(40.3342654,-104.8980591),
-        new google.maps.LatLng(40.3343063,-104.8981583)
-    ];
-
-    // Construct the rrTrack 7 polyline.
-    rrTrack7 = new google.maps.Polyline({
-        path: rrTrack7Coords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-    });
-
-    rrTrack7.setMap(map);
-
-    // Define the LatLng coordinates for the rrTrack 8 polyline.
-    var rrTrack8Coords = [
-        new google.maps.LatLng(40.3330376,-104.8949718),
-        new google.maps.LatLng(40.333149,-104.8956008),
-        new google.maps.LatLng(40.3331828,-104.8957349),
-        new google.maps.LatLng(40.3332175,-104.8958422),
-        new google.maps.LatLng(40.3332523,-104.8959428),
-        new google.maps.LatLng(40.3333167,-104.8960997),
-        new google.maps.LatLng(40.3335487,-104.8966482),
-        new google.maps.LatLng(40.3335896,-104.8967555),
-        new google.maps.LatLng(40.3336356,-104.8968816),
-        new google.maps.LatLng(40.3336806,-104.8969929)
-    ];
-
-    // Construct the rrTrack 8 polyline.
-    rrTrack8 = new google.maps.Polyline({
-        path: rrTrack8Coords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-    });
-
-    rrTrack8.setMap(map);
-
-    // Define the LatLng coordinates for the rrTrack 9 polyline.
-    var rrTrack9Coords = [
-        new google.maps.LatLng(40.3337788,-104.89446760000001),
-        new google.maps.LatLng(40.3338156,-104.8965409),
-        new google.maps.LatLng(40.3338176,-104.8966335),
-        new google.maps.LatLng(40.3338227,-104.89672200000001),
-        new google.maps.LatLng(40.3338319,-104.8968145),
-        new google.maps.LatLng(40.3338462,-104.8969004),
-        new google.maps.LatLng(40.3338657,-104.8969875),
-        new google.maps.LatLng(40.3339372,-104.8972397),
-        new google.maps.LatLng(40.3339699,-104.897351),
-        new google.maps.LatLng(40.3340037,-104.8974515),
-        new google.maps.LatLng(40.3340671,-104.8976165)
-    ];
-
-    // Construct the rrTrack 9 polyline.
-    rrTrack9 = new google.maps.Polyline({
-        path: rrTrack9Coords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-    });
-
-    rrTrack9.setMap(map);
-
-    // Define the LatLng coordinates for the rrTrack 10 polyline.
-    var rrTrack10Coords = [
-        new google.maps.LatLng(40.3338135,-104.89440050000002),
-        new google.maps.LatLng(40.3338514,-104.8966214),
-        new google.maps.LatLng(40.3338565,-104.896726),
-        new google.maps.LatLng(40.3338667,-104.896832),
-        new google.maps.LatLng(40.333881,-104.8969433),
-        new google.maps.LatLng(40.3338974,-104.8970532),
-        new google.maps.LatLng(40.3339158,-104.8971458),
-        new google.maps.LatLng(40.3339403,-104.8972517)
-    ];
-
-    // Construct the rrTrack 10 polyline.
-    rrTrack10 = new google.maps.Polyline({
-        path: rrTrack10Coords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-    });
-
-    rrTrack10.setMap(map);
+    railYard.setMap(map);
 
     // Define the LatLng coordinates for the bnsfCon polyline.
     var bnsfConCoords = [
@@ -786,11 +524,11 @@ function init() {
     // Construct the bldgG polygon.
     bldgG = new google.maps.Polygon({
         paths: bldgGCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF0000',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
-        fillOpacity: 0.35
+        fillColor: '#FF0000',
+        fillOpacity: 0.5
     });
 
     bldgG.setMap(map);
@@ -810,56 +548,14 @@ function init() {
     // Construct the bldgH polygon.
     bldgH = new google.maps.Polygon({
         paths: bldgHCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF0000',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
-        fillOpacity: 0.35
+        fillColor: '#FF0000',
+        fillOpacity: 0.5
     });
 
     bldgH.setMap(map);
-
-    // Define the LatLng coordinates for the railYard polygon.
-    var railYardCoords = [
-        new google.maps.LatLng(40.3321676,-104.8951328),
-        new google.maps.LatLng(40.3328566,-104.8948967),
-        new google.maps.LatLng(40.3329834,-104.894878),
-        new google.maps.LatLng(40.3330754,-104.8948485),
-        new google.maps.LatLng(40.3336663,-104.8945454),
-        new google.maps.LatLng(40.333742,-104.8944783),
-        new google.maps.LatLng(40.3338197,-104.8943442),
-        new google.maps.LatLng(40.3338565,-104.8943415),
-        new google.maps.LatLng(40.33389739999999,-104.8966992),
-        new google.maps.LatLng(40.3339076,-104.8968548),
-        new google.maps.LatLng(40.333926,-104.897005),
-        new google.maps.LatLng(40.3339648,-104.8971847),
-        new google.maps.LatLng(40.3339955,-104.8973161),
-        new google.maps.LatLng(40.3340446,-104.8974904),
-        new google.maps.LatLng(40.334128400000004,-104.8976943),
-        new google.maps.LatLng(40.3342061,-104.8978767),
-        new google.maps.LatLng(40.3342879,-104.8980698),
-        new google.maps.LatLng(40.334255199999994,-104.8981073),
-        new google.maps.LatLng(40.33415500000001,-104.8979437),
-        new google.maps.LatLng(40.334079300000006,-104.8978311),
-        new google.maps.LatLng(40.33327370000001,-104.8968521),
-        new google.maps.LatLng(40.3324314,-104.8958087),
-        new google.maps.LatLng(40.3323312,-104.8956504),
-        new google.maps.LatLng(40.33225960000001,-104.8954895),
-        new google.maps.LatLng(40.332224800000006,-104.8953849),
-        new google.maps.LatLng(40.332184,-104.8952374)
-    ];
-
-    // Construct the railYard polygon.
-    railYard = new google.maps.Polygon({
-        paths: railYardCoords,
-        strokeColor: '#999966',
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-        fillColor: '#999966',
-        fillOpacity: 0.35
-    });
-
-    railYard.setMap(map);
 
     // Define the LatLng coordinates for the nWsection polygon.
     var nWsectionCoords = [
@@ -956,10 +652,10 @@ function init() {
     // Construct the nSection polygon.
     nSection = new google.maps.Polygon({
         paths: nSectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF6600',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF6600',
         fillOpacity: 0.35
     });
 
@@ -1015,10 +711,10 @@ function init() {
     // Construct the cWsection polygon.
     cWsection = new google.maps.Polygon({
         paths: cWsectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF6600',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF6600',
         fillOpacity: 0.35
     });
 
@@ -1119,10 +815,10 @@ function init() {
     // Construct the southSection polygon.
     southSection = new google.maps.Polygon({
         paths: southSectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF6600',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF6600',
         fillOpacity: 0.35
     });
 
@@ -1299,10 +995,10 @@ function init() {
     // Construct the grnWaySection polygon.
     grnWaySection = new google.maps.Polygon({
         paths: grnWaySectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#336633',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#336633',
         fillOpacity: 0.35
     });
 
@@ -1349,10 +1045,10 @@ function init() {
     // Construct the CenterSection polygon.
     CenterSection = new google.maps.Polygon({
         paths: CenterSectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF6600',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF6600',
         fillOpacity: 0.35
     });
 
@@ -1398,11 +1094,11 @@ function init() {
     // Construct the TransLoadSection polygon.
     TransLoadSection = new google.maps.Polygon({
         paths: TransLoadSectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#999933',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
-        fillOpacity: 0.35
+        fillColor: '#999933',
+        fillOpacity: 0.75
     });
 
    TransLoadSection.setMap(map);
@@ -1498,6 +1194,227 @@ function init() {
     // Construct the btmDumpSection polygon.
     btmDumpSection = new google.maps.Polygon({
         paths: btmDumpSectionCoords,
+        strokeColor: '#00FFCC',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+        fillColor: '#00FFCC',
+        fillOpacity: 0.5
+    });
+
+   btmDumpSection.setMap(map);
+
+    // Define the LatLng coordinates for the oilStorSection polygon.
+    var oilStorSectionCoords = [
+        new google.maps.LatLng(40.331893599999994,-104.8928314),
+        new google.maps.LatLng(40.3320838,-104.8928314),
+        new google.maps.LatLng(40.332096,-104.8942235),
+        new google.maps.LatLng(40.33172999999999,-104.8942235),
+        new google.maps.LatLng(40.3317055,-104.8941913),
+        new google.maps.LatLng(40.3316789,-104.8941618),
+        new google.maps.LatLng(40.3316523,-104.89394720000001),
+        new google.maps.LatLng(40.331636,-104.8937434),
+        new google.maps.LatLng(40.3316258,-104.8935342),
+        new google.maps.LatLng(40.3316094,-104.8933035),
+        new google.maps.LatLng(40.3316053,-104.8931131),
+        new google.maps.LatLng(40.3316012,-104.8930031),
+        new google.maps.LatLng(40.3316155,-104.8929736),
+        new google.maps.LatLng(40.3316953,-104.8929736),
+        new google.maps.LatLng(40.33172390000001,-104.8929521),
+        new google.maps.LatLng(40.3317443,-104.89292),
+        new google.maps.LatLng(40.3317771,-104.892877),
+        new google.maps.LatLng(40.3318118,-104.8928449),
+        new google.maps.LatLng(40.3318486,-104.8928261)
+    ];
+
+    // Construct the oilStorSection polygon.
+    oilStorSection = new google.maps.Polygon({
+        paths: oilStorSectionCoords,
+        strokeColor: '#663399',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+        fillColor: '#663399',
+        fillOpacity: 0.5
+    });
+
+   oilStorSection.setMap(map);
+
+    // Define the LatLng coordinates for the grainElev polygon.
+    var grainElevCoords = [
+        new google.maps.LatLng(40.332037799999995,-104.8942262),
+        new google.maps.LatLng(40.332096,-104.8942235),
+        new google.maps.LatLng(40.332095,-104.894013),
+        new google.maps.LatLng(40.3324324,-104.8940183),
+        new google.maps.LatLng(40.3324344,-104.894131),
+        new google.maps.LatLng(40.3325459,-104.8941296),
+        new google.maps.LatLng(40.3325336,-104.8946393),
+        new google.maps.LatLng(40.332528499999995,-104.8947197),
+        new google.maps.LatLng(40.3325131,-104.8948109),
+        new google.maps.LatLng(40.3324825,-104.8948686),
+        new google.maps.LatLng(40.3324487,-104.8949088),
+        new google.maps.LatLng(40.3324119,-104.8949356),
+        new google.maps.LatLng(40.3323772,-104.894945),
+        new google.maps.LatLng(40.3323424,-104.894937),
+        new google.maps.LatLng(40.3323107,-104.8949128),
+        new google.maps.LatLng(40.3322831,-104.8948766),
+        new google.maps.LatLng(40.3322555,-104.8948351),
+        new google.maps.LatLng(40.33223,-104.894772),
+        new google.maps.LatLng(40.3322116,-104.89470630000001),
+        new google.maps.LatLng(40.33220240000001,-104.8946366),
+        new google.maps.LatLng(40.33209500000001,-104.8946406),
+        new google.maps.LatLng(40.3320868,-104.8944032),
+        new google.maps.LatLng(40.3320418,-104.8944032)
+    ];
+
+    // Construct the grainElev polygon.
+    grainElev = new google.maps.Polygon({
+        paths: grainElevCoords,
+        strokeColor: '#FFFF00',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+        fillColor: '#FFFF00',
+        fillOpacity: 0.5
+    });
+
+   grainElev.setMap(map);
+
+    // Define the LatLng coordinates for the bldgP polygon.
+    var bldgPCoords = [
+        new google.maps.LatLng(40.3324682,-104.8930031),
+        new google.maps.LatLng(40.33248040000001,-104.8935878),
+        new google.maps.LatLng(40.3321972,-104.8935905),
+        new google.maps.LatLng(40.3321962,-104.8933893),
+        new google.maps.LatLng(40.3321277,-104.8933907),
+        new google.maps.LatLng(40.3321267,-104.8931479),
+        new google.maps.LatLng(40.3321625,-104.8931466),
+        new google.maps.LatLng(40.33216250000001,-104.8930299),
+        new google.maps.LatLng(40.332186,-104.8930286),
+        new google.maps.LatLng(40.332186,-104.8930138)
+    ];
+
+    // Construct the bldgP polygon.
+    bldgP = new google.maps.Polygon({
+        paths: bldgPCoords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+        fillColor: '#FF0000',
+        fillOpacity: 0.5
+    });
+
+   bldgP.setMap(map);
+
+    // Define the LatLng coordinates for the bldgI polygon.
+    var bldgICoords = [
+        new google.maps.LatLng(40.333192999999994,-104.8941511),
+        new google.maps.LatLng(40.3331899,-104.8945642),
+        new google.maps.LatLng(40.3330805,-104.8945655),
+        new google.maps.LatLng(40.3330754,-104.8941256),
+        new google.maps.LatLng(40.33317460000001,-104.894127)
+    ];
+
+    // Construct the bldgI polygon.
+    bldgI = new google.maps.Polygon({
+        paths: bldgICoords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+        fillColor: '#FF0000',
+        fillOpacity: 0.5
+    });
+
+   bldgI.setMap(map);
+
+    // Define the LatLng coordinates for the bldgL polygon.
+    var bldgLCoords = [
+        new google.maps.LatLng(40.3335201,-104.8936334),
+        new google.maps.LatLng(40.3335334,-104.8941927),
+        new google.maps.LatLng(40.3334394,-104.8941953),
+        new google.maps.LatLng(40.3334383,-104.8942879),
+        new google.maps.LatLng(40.3333882,-104.8942865),
+        new google.maps.LatLng(40.3333862,-104.894198),
+        new google.maps.LatLng(40.3332973,-104.8941953),
+        new google.maps.LatLng(40.33329419999999,-104.8939633),
+        new google.maps.LatLng(40.3332492,-104.893962),
+        new google.maps.LatLng(40.3332502,-104.8938279),
+        new google.maps.LatLng(40.3332932,-104.8938265),
+        new google.maps.LatLng(40.3332901,-104.8936026),
+        new google.maps.LatLng(40.33331770000001,-104.8936026),
+        new google.maps.LatLng(40.3333177,-104.8936401)
+    ];
+
+    // Construct the bldgL polygon.
+    bldgL = new google.maps.Polygon({
+        paths: bldgLCoords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+        fillColor: '#FF0000',
+        fillOpacity: 0.5
+    });
+
+   bldgL.setMap(map);
+
+    // Define the LatLng coordinates for the bldgJ polygon.
+    var bldgJCoords = [
+        new google.maps.LatLng(40.333559,-104.89494100000002),
+        new google.maps.LatLng(40.3335661,-104.8953916),
+        new google.maps.LatLng(40.333424,-104.8953916),
+        new google.maps.LatLng(40.333421,-104.8949423)
+    ];
+
+    // Construct the bldgJ polygon.
+    bldgJ = new google.maps.Polygon({
+        paths: bldgJCoords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+        fillColor: '#FF0000',
+        fillOpacity: 0.5
+    });
+
+   bldgJ.setMap(map);
+
+    // Define the LatLng coordinates for the bldgK polygon.
+    var bldgKCoords = [
+        new google.maps.LatLng(40.33365200000001,-104.8962164),
+        new google.maps.LatLng(40.333651,-104.89595490000002),
+        new google.maps.LatLng(40.3336213,-104.8959562),
+        new google.maps.LatLng(40.3336224,-104.8958744),
+        new google.maps.LatLng(40.3336489,-104.8958744),
+        new google.maps.LatLng(40.3336489,-104.8958409)
+    ];
+
+    // Construct the bldgK polygon.
+    bldgK = new google.maps.Polygon({
+        paths: bldgKCoords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+        fillColor: '#FF0000',
+        fillOpacity: 0.5
+    });
+
+   bldgK.setMap(map);
+
+    // Define the LatLng coordinates for the truckScale polygon.
+    var truckScaleCoords = [
+        new google.maps.LatLng(40.3341294,-104.8959669),
+        new google.maps.LatLng(40.334131500000005,-104.8962298),
+        new google.maps.LatLng(40.3340855,-104.8962285),
+        new google.maps.LatLng(40.33408550000001,-104.8961882),
+        new google.maps.LatLng(40.3340609,-104.8961882),
+        new google.maps.LatLng(40.3340609,-104.8961279),
+        new google.maps.LatLng(40.3340221,-104.8961225),
+        new google.maps.LatLng(40.334022100000006,-104.89606620000002),
+        new google.maps.LatLng(40.33403129999999,-104.8960675),
+        new google.maps.LatLng(40.3340313,-104.8960353),
+        new google.maps.LatLng(40.33405580000001,-104.8960327),
+        new google.maps.LatLng(40.3340568,-104.8959669)
+    ];
+
+    // Construct the truckScale polygon.
+    truckScale = new google.maps.Polygon({
+        paths: truckScaleCoords,
         strokeColor: '#66FF66',
         strokeOpacity: 0.8,
         strokeWeight: 1,
@@ -1505,7 +1422,311 @@ function init() {
         fillOpacity: 0.35
     });
 
-   btmDumpSection.setMap(map);
+   truckScale.setMap(map);
+
+    // Define the LatLng coordinates for the rrTrack 1 polyline.
+    var rrTrack1Coords = [
+        new google.maps.LatLng(40.3321615,-104.88966380000001),
+        new google.maps.LatLng(40.3321717,-104.8913187),
+        new google.maps.LatLng(40.3321737,-104.8915306),
+        new google.maps.LatLng(40.3321676,-104.8916593),
+        new google.maps.LatLng(40.3321615,-104.8917666),
+        new google.maps.LatLng(40.3321492,-104.8919088),
+        new google.maps.LatLng(40.3321022,-104.8923513),
+        new google.maps.LatLng(40.3320899,-104.8924693),
+        new google.maps.LatLng(40.3320858,-104.8925927),
+        new google.maps.LatLng(40.3320858,-104.8927188),
+        new google.maps.LatLng(40.3320858,-104.8928073),
+        new google.maps.LatLng(40.3321063,-104.8945239),
+        new google.maps.LatLng(40.3321083,-104.89476260000002),
+        new google.maps.LatLng(40.3321144,-104.8949262),
+        new google.maps.LatLng(40.3321287,-104.89506840000001),
+        new google.maps.LatLng(40.332139,-104.8951569),
+        new google.maps.LatLng(40.3321574,-104.8952374),
+        new google.maps.LatLng(40.3321819,-104.8953366),
+        new google.maps.LatLng(40.3322126,-104.8954439),
+        new google.maps.LatLng(40.3322473,-104.8955378),
+        new google.maps.LatLng(40.33228,-104.8956156),
+        new google.maps.LatLng(40.3323046,-104.8956558),
+        new google.maps.LatLng(40.3323455,-104.89572820000001),
+        new google.maps.LatLng(40.3323741,-104.8957711),
+        new google.maps.LatLng(40.3324252,-104.89584360000002),
+        new google.maps.LatLng(40.3339342,-104.8977023),
+        new google.maps.LatLng(40.3340303,-104.8978338),
+        new google.maps.LatLng(40.3341223,-104.8979625),
+        new google.maps.LatLng(40.3342245,-104.89811),
+        new google.maps.LatLng(40.3342961,-104.8982415),
+        new google.maps.LatLng(40.3343676,-104.8984158),
+        new google.maps.LatLng(40.33443100000001,-104.8985767),
+        new google.maps.LatLng(40.3344821,-104.8987269),
+        new google.maps.LatLng(40.3345189,-104.8988798),
+        new google.maps.LatLng(40.3345373,-104.8989925),
+        new google.maps.LatLng(40.3345557,-104.8991373),
+        new google.maps.LatLng(40.33457,-104.8992634),
+        new google.maps.LatLng(40.3345762,-104.8993948)
+    ];
+
+    // Construct the rrTrack 1 polyline.
+    rrTrack1 = new google.maps.Polyline({
+        path: rrTrack1Coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+    });
+
+    rrTrack1.setMap(map);
+
+    // Define the LatLng coordinates for the rrTrack 2 polyline.
+    var rrTrack2Coords = [
+        new google.maps.LatLng(40.3321063,-104.8944864),
+        new google.maps.LatLng(40.3321134,-104.8946004),
+        new google.maps.LatLng(40.3321216,-104.8947251),
+        new google.maps.LatLng(40.332139,-104.8948538),
+        new google.maps.LatLng(40.3321635,-104.895004),
+        new google.maps.LatLng(40.3321921,-104.8951381),
+        new google.maps.LatLng(40.3322269,-104.8952562),
+        new google.maps.LatLng(40.332267800000004,-104.89537020000002),
+        new google.maps.LatLng(40.3323046,-104.8954506),
+        new google.maps.LatLng(40.3323475,-104.8955271),
+        new google.maps.LatLng(40.3324068,-104.89561290000002),
+        new google.maps.LatLng(40.3325683,-104.8958422),
+        new google.maps.LatLng(40.332688,-104.8959965),
+        new google.maps.LatLng(40.3339566,-104.8975696),
+        new google.maps.LatLng(40.3340149,-104.89764470000001),
+        new google.maps.LatLng(40.3340722,-104.8977198),
+        new google.maps.LatLng(40.3341243,-104.8978029),
+        new google.maps.LatLng(40.334173400000005,-104.8978887),
+        new google.maps.LatLng(40.3342194,-104.8979706),
+        new google.maps.LatLng(40.3342552,-104.898043),
+        new google.maps.LatLng(40.334294,-104.8981288),
+        new google.maps.LatLng(40.3343349,-104.8982254),
+        new google.maps.LatLng(40.3343737,-104.8983233),
+        new google.maps.LatLng(40.33440850000001,-104.8984158),
+        new google.maps.LatLng(40.3344382,-104.8985083),
+        new google.maps.LatLng(40.3344637,-104.8986049),
+        new google.maps.LatLng(40.3344934,-104.8987135),
+        new google.maps.LatLng(40.3345107,-104.8988114),
+        new google.maps.LatLng(40.3345271,-104.8989174),
+        new google.maps.LatLng(40.3345373,-104.8989925)
+    ];
+
+    // Construct the rrTrack 2 polyline.
+    rrTrack2 = new google.maps.Polyline({
+        path: rrTrack2Coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+    });
+
+    rrTrack2.setMap(map);
+
+    // Define the LatLng coordinates for the rrTrack 3 polyline.
+    var rrTrack3Coords = [
+        new google.maps.LatLng(40.3321482,-104.8931412),
+        new google.maps.LatLng(40.3321645,-104.8945105),
+        new google.maps.LatLng(40.3321707,-104.8946527),
+        new google.maps.LatLng(40.3321819,-104.89478950000002),
+        new google.maps.LatLng(40.3322013,-104.8949155),
+        new google.maps.LatLng(40.3322248,-104.8950416),
+        new google.maps.LatLng(40.3322545,-104.895165),
+        new google.maps.LatLng(40.3322862,-104.8952709),
+        new google.maps.LatLng(40.33233010000001,-104.8953769),
+        new google.maps.LatLng(40.3323915,-104.895511),
+        new google.maps.LatLng(40.3324549,-104.8956491),
+        new google.maps.LatLng(40.3325142,-104.8957524),
+        new google.maps.LatLng(40.3325683,-104.8958422)
+    ];
+
+    // Construct the rrTrack 3 polyline.
+    rrTrack3 = new google.maps.Polyline({
+        path: rrTrack3Coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+    });
+
+    rrTrack3.setMap(map);
+
+    // Define the LatLng coordinates for the rrTrack 4 polyline.
+    var rrTrack4Coords = [
+        new google.maps.LatLng(40.332554,-104.89537020000002),
+        new google.maps.LatLng(40.3325765,-104.8954788),
+        new google.maps.LatLng(40.3326031,-104.8955821),
+        new google.maps.LatLng(40.3326348,-104.895688),
+        new google.maps.LatLng(40.3326644,-104.8957752),
+        new google.maps.LatLng(40.332700200000005,-104.8958637),
+        new google.maps.LatLng(40.3327411,-104.8959509),
+        new google.maps.LatLng(40.3327922,-104.8960488),
+        new google.maps.LatLng(40.3328393,-104.8961319),
+        new google.maps.LatLng(40.3328894,-104.8962164),
+        new google.maps.LatLng(40.3329323,-104.89628880000001),
+        new google.maps.LatLng(40.3329814,-104.8963626)
+    ];
+
+    // Construct the rrTrack 4 polyline.
+    rrTrack4 = new google.maps.Polyline({
+        path: rrTrack4Coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+    });
+
+    rrTrack4.setMap(map);
+
+    // Define the LatLng coordinates for the rrTrack 5 polyline.
+    var rrTrack5Coords = [
+        new google.maps.LatLng(40.3326706,-104.8949879),
+        new google.maps.LatLng(40.3326726,-104.8951462),
+        new google.maps.LatLng(40.3326839,-104.8952763),
+        new google.maps.LatLng(40.3326972,-104.8953728),
+        new google.maps.LatLng(40.3327196,-104.8954989),
+        new google.maps.LatLng(40.3327452,-104.8956142),
+        new google.maps.LatLng(40.3327697,-104.8957095),
+        new google.maps.LatLng(40.3328025,-104.8958234),
+        new google.maps.LatLng(40.3328311,-104.8959066),
+        new google.maps.LatLng(40.3328679,-104.8960125),
+        new google.maps.LatLng(40.3329047,-104.8961024),
+        new google.maps.LatLng(40.3329486,-104.896199),
+        new google.maps.LatLng(40.3329947,-104.8962834),
+        new google.maps.LatLng(40.33304580000001,-104.896376),
+        new google.maps.LatLng(40.3330938,-104.8964605),
+        new google.maps.LatLng(40.3331429,-104.8965463),
+        new google.maps.LatLng(40.333193,-104.8966241)
+    ];
+
+    // Construct the rrTrack 5 polyline.
+    rrTrack5 = new google.maps.Polyline({
+        path: rrTrack5Coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+    });
+
+    rrTrack5.setMap(map);
+
+    // Define the LatLng coordinates for the rrTrack 6 polyline.
+    var rrTrack6Coords = [
+        new google.maps.LatLng(40.3329865,-104.8949946),
+        new google.maps.LatLng(40.3330171,-104.8951623),
+        new google.maps.LatLng(40.3330989,-104.8956276),
+        new google.maps.LatLng(40.3331214,-104.8957309),
+        new google.maps.LatLng(40.333147,-104.8958395),
+        new google.maps.LatLng(40.3331725,-104.8959307),
+        new google.maps.LatLng(40.3332124,-104.8960474),
+        new google.maps.LatLng(40.3332472,-104.8961319),
+        new google.maps.LatLng(40.33328190000001,-104.8962097),
+        new google.maps.LatLng(40.3339137,-104.8974489),
+        new google.maps.LatLng(40.3339607,-104.897532),
+        new google.maps.LatLng(40.3340067,-104.8976085),
+        new google.maps.LatLng(40.3340967,-104.8977587)
+    ];
+
+    // Construct the rrTrack 6 polyline.
+    rrTrack6 = new google.maps.Polyline({
+        path: rrTrack6Coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+    });
+
+    rrTrack6.setMap(map);
+
+    // Define the LatLng coordinates for the rrTrack 7 polyline.
+    var rrTrack7Coords = [
+        new google.maps.LatLng(40.3332727,-104.8939794),
+        new google.maps.LatLng(40.3332952,-104.8954774),
+        new google.maps.LatLng(40.3333013,-104.8955968),
+        new google.maps.LatLng(40.3333116,-104.8957054),
+        new google.maps.LatLng(40.3333259,-104.895802),
+        new google.maps.LatLng(40.3333422,-104.8958865),
+        new google.maps.LatLng(40.3333698,-104.8959924),
+        new google.maps.LatLng(40.3334015,-104.8960997),
+        new google.maps.LatLng(40.3334322,-104.8961923),
+        new google.maps.LatLng(40.3334772,-104.89630490000002),
+        new google.maps.LatLng(40.3342654,-104.8980591),
+        new google.maps.LatLng(40.3343063,-104.8981583)
+    ];
+
+    // Construct the rrTrack 7 polyline.
+    rrTrack7 = new google.maps.Polyline({
+        path: rrTrack7Coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+    });
+
+    rrTrack7.setMap(map);
+
+    // Define the LatLng coordinates for the rrTrack 8 polyline.
+    var rrTrack8Coords = [
+        new google.maps.LatLng(40.3330376,-104.8949718),
+        new google.maps.LatLng(40.333149,-104.8956008),
+        new google.maps.LatLng(40.3331828,-104.8957349),
+        new google.maps.LatLng(40.3332175,-104.8958422),
+        new google.maps.LatLng(40.3332523,-104.8959428),
+        new google.maps.LatLng(40.3333167,-104.8960997),
+        new google.maps.LatLng(40.3335487,-104.8966482),
+        new google.maps.LatLng(40.3335896,-104.8967555),
+        new google.maps.LatLng(40.3336356,-104.8968816),
+        new google.maps.LatLng(40.3336806,-104.8969929)
+    ];
+
+    // Construct the rrTrack 8 polyline.
+    rrTrack8 = new google.maps.Polyline({
+        path: rrTrack8Coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+    });
+
+    rrTrack8.setMap(map);
+
+    // Define the LatLng coordinates for the rrTrack 9 polyline.
+    var rrTrack9Coords = [
+        new google.maps.LatLng(40.3337788,-104.89446760000001),
+        new google.maps.LatLng(40.3338156,-104.8965409),
+        new google.maps.LatLng(40.3338176,-104.8966335),
+        new google.maps.LatLng(40.3338227,-104.89672200000001),
+        new google.maps.LatLng(40.3338319,-104.8968145),
+        new google.maps.LatLng(40.3338462,-104.8969004),
+        new google.maps.LatLng(40.3338657,-104.8969875),
+        new google.maps.LatLng(40.3339372,-104.8972397),
+        new google.maps.LatLng(40.3339699,-104.897351),
+        new google.maps.LatLng(40.3340037,-104.8974515),
+        new google.maps.LatLng(40.3340671,-104.8976165)
+    ];
+
+    // Construct the rrTrack 9 polyline.
+    rrTrack9 = new google.maps.Polyline({
+        path: rrTrack9Coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+    });
+
+    rrTrack9.setMap(map);
+
+    // Define the LatLng coordinates for the rrTrack 10 polyline.
+    var rrTrack10Coords = [
+        new google.maps.LatLng(40.3338135,-104.89440050000002),
+        new google.maps.LatLng(40.3338514,-104.8966214),
+        new google.maps.LatLng(40.3338565,-104.896726),
+        new google.maps.LatLng(40.3338667,-104.896832),
+        new google.maps.LatLng(40.333881,-104.8969433),
+        new google.maps.LatLng(40.3338974,-104.8970532),
+        new google.maps.LatLng(40.3339158,-104.8971458),
+        new google.maps.LatLng(40.3339403,-104.8972517)
+    ];
+
+    // Construct the rrTrack 10 polyline.
+    rrTrack10 = new google.maps.Polyline({
+        path: rrTrack10Coords,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+    });
+
+    rrTrack10.setMap(map);
 
 var contentString = '<div id="infoWindow">this is the annexed piece</div>';
 
