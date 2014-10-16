@@ -39,7 +39,7 @@ var AnnexAreaInfoWindow;
 
 function init() {
     //location of infoWindow
-    var myLatlng = new google.maps.LatLng(40.330851, -104.896860);
+    var mapLatlng = new google.maps.LatLng(40.330851, -104.896860);
     // variables to contain map overlays
     var annexArea;
 
@@ -50,7 +50,7 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.330851, -104.896860), // Center of CSG
+        center: mapLatlng,
 
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
@@ -1728,16 +1728,23 @@ function init() {
 
     rrTrack10.setMap(map);
 
-var contentString = '<div id="infoWindow">this is the annexed piece</div>';
+    var AnnexAreaContent = '<div id="infoWindow" class="infoWindow">this is the annexed piece</div>';
+    var oilStorContent = '<div id="infoWindow" class="infoWindow">this is the other piece</div>';
 
     var AnnexAreaInfoWindow = new google.maps.InfoWindow({
-        content: contentString
     });
 
-  google.maps.event.addListener(annexArea, 'click', function(event) {
-    AnnexAreaInfoWindow.open(map);
-    AnnexAreaInfoWindow.setPosition(event.latLng);
-  });
+    google.maps.event.addListener(annexArea, 'click', function(event) {
+        AnnexAreaInfoWindow.open(map);
+        AnnexAreaInfoWindow.setPosition(event.latLng);
+        AnnexAreaInfoWindow.setContent(AnnexAreaContent);
+    });
+
+    google.maps.event.addListener(oilStorSection, 'click', function(event) {
+        AnnexAreaInfoWindow.open(map);
+        AnnexAreaInfoWindow.setPosition(event.latLng);
+        AnnexAreaInfoWindow.setContent(oilStorContent);
+    });
 }
 
 google.maps.event.addDomListener(window, 'load', init);
