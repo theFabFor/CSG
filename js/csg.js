@@ -38,7 +38,7 @@ var infoWindow;
 var AnnexAreaInfoWindow;
 
 function init() {
-    //location of infoWindow
+    //location of map center
     var mapLatlng = new google.maps.LatLng(40.330851, -104.896860);
     // variables to contain map overlays
     var annexArea;
@@ -47,7 +47,7 @@ function init() {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 15,
+        zoom: 16,
 
         // The latitude and longitude to center the map (always required)
         center: mapLatlng,
@@ -1748,3 +1748,10 @@ function init() {
 }
 
 google.maps.event.addDomListener(window, 'load', init);
+
+/*(window).resize(function () {
+    var h = $(window).height(),
+        offsetTop = 60; // Calculate the top offset
+
+('#map').css('height', (h - offsetTop));
+}).resize();*/
