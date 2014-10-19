@@ -33,9 +33,8 @@ $('.navbar-collapse ul li a').click(function() {
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
 
-// variable to contain info window of annexArea
+// variable to contain info window
 var infoWindow;
-var AnnexAreaInfoWindow;
 
 function init() {
     //location of map center
@@ -55,7 +54,7 @@ function init() {
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
         scrollwheel: false,
-        draggable: false,
+        //draggable: false,
 
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
@@ -144,7 +143,7 @@ function init() {
             "featureType": "transit",
             "elementType": "geometry",
             "stylers": [{
-                "color": "#000000"
+                "color": "#FF0000"
             }, {
                 "lightness": 19
             }]
@@ -824,8 +823,8 @@ function init() {
 
     southSection.setMap(map);
 
-    // Define the LatLng coordinates for the grnWaySection polygon.
-    var grnWaySectionCoords = [
+    // Define the LatLng coordinates for the greenWay polygon.
+    var greenWayCoords = [
         new google.maps.LatLng(40.3286139,-104.88676970000002),
         new google.maps.LatLng(40.3300575,-104.8867536),
         new google.maps.LatLng(40.33003699999999,-104.887054),
@@ -992,9 +991,9 @@ function init() {
         new google.maps.LatLng(40.3280086,-104.8867643)
     ];
 
-    // Construct the grnWaySection polygon.
-    grnWaySection = new google.maps.Polygon({
-        paths: grnWaySectionCoords,
+    // Construct the greenWay polygon.
+    greenWay = new google.maps.Polygon({
+        paths: greenWayCoords,
         strokeColor: '#336633',
         strokeOpacity: 0.8,
         strokeWeight: 1,
@@ -1002,7 +1001,7 @@ function init() {
         fillOpacity: 0.35
     });
 
-    grnWaySection.setMap(map);
+    greenWay.setMap(map);
 
     // Define the LatLng coordinates for the CenterSection polygon.
     var CenterSectionCoords = [
@@ -1054,8 +1053,8 @@ function init() {
 
    CenterSection.setMap(map);
 
-    // Define the LatLng coordinates for the TransLoadSection polygon.
-    var TransLoadSectionCoords = [
+    // Define the LatLng coordinates for the transLoadFacility polygon.
+    var transLoadFacilityCoords = [
         new google.maps.LatLng(40.3321512,-104.8950335),
         new google.maps.LatLng(40.332184,-104.8952374),
         new google.maps.LatLng(40.3322494,-104.8954546),
@@ -1091,9 +1090,9 @@ function init() {
         new google.maps.LatLng(40.3320879,-104.8950577)
     ];
 
-    // Construct the TransLoadSection polygon.
-    TransLoadSection = new google.maps.Polygon({
-        paths: TransLoadSectionCoords,
+    // Construct the transLoadFacility polygon.
+    transLoadFacility = new google.maps.Polygon({
+        paths: transLoadFacilityCoords,
         strokeColor: '#999933',
         strokeOpacity: 0.8,
         strokeWeight: 1,
@@ -1101,10 +1100,10 @@ function init() {
         fillOpacity: 0.75
     });
 
-   TransLoadSection.setMap(map);
+   transLoadFacility.setMap(map);
 
-    // Define the LatLng coordinates for the NorthEastSection polygon.
-    var NorthEastSectionCoords = [
+    // Define the LatLng coordinates for the northEastSection polygon.
+    var northEastSectionCoords = [
         new google.maps.LatLng(40.3342061,-104.892464),
         new google.maps.LatLng(40.3339423,-104.8923782),
         new google.maps.LatLng(40.3339035,-104.8923674),
@@ -1148,9 +1147,9 @@ function init() {
         new google.maps.LatLng(40.334150900000004,-104.88865520000002)
     ];
 
-    // Construct the NorthEastSection polygon.
-    NorthEastSection = new google.maps.Polygon({
-        paths: NorthEastSectionCoords,
+    // Construct the northEastSection polygon.
+    northEastSection = new google.maps.Polygon({
+        paths: northEastSectionCoords,
         strokeColor: '#66FF66',
         strokeOpacity: 0.8,
         strokeWeight: 1,
@@ -1158,7 +1157,7 @@ function init() {
         fillOpacity: 0.35
     });
 
-   NorthEastSection.setMap(map);
+   northEastSection.setMap(map);
 
     // Define the LatLng coordinates for the btmDumpSection polygon.
     var btmDumpSectionCoords = [
@@ -1728,23 +1727,211 @@ function init() {
 
     rrTrack10.setMap(map);
 
-    var AnnexAreaContent = '<div id="infoWindow" class="infoWindow">this is the annexed piece</div>';
-    var oilStorContent = '<div id="infoWindow" class="infoWindow">this is the other piece</div>';
 
-    var AnnexAreaInfoWindow = new google.maps.InfoWindow({
+    var InfoWindow = new google.maps.InfoWindow({
     });
+
+    var railYardContent = '<div id="infoWindow" class="infoWindow">this is the rail yard</div>';
+
+    google.maps.event.addListener(railYard, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(railYardContent);
+    });
+
+    var AnnexAreaContent = '<div id="infoWindow" class="infoWindow">this is the annexed piece</div>';
 
     google.maps.event.addListener(annexArea, 'click', function(event) {
-        AnnexAreaInfoWindow.open(map);
-        AnnexAreaInfoWindow.setPosition(event.latLng);
-        AnnexAreaInfoWindow.setContent(AnnexAreaContent);
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(AnnexAreaContent);
     });
+    
+    var waterAreaContent = '<div id="infoWindow" class="infoWindow">this is the water storage and loading area</div>';
+
+    google.maps.event.addListener(waterArea, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(waterAreaContent);
+    });
+    
+    var elecAreaContent = '<div id="infoWindow" class="infoWindow">14 Mega Watt sub-station. Built in 2008.</div>';
+
+    google.maps.event.addListener(elecArea, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(elecAreaContent);
+    });
+    
+    var eastNearRoadContent = '<div id="infoWindow" class="infoWindow">1 to 8 seperate building sites. Direct access to county road. Raw ground or build to suit.</div>';
+
+    google.maps.event.addListener(eastNearRoad, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(eastNearRoadContent);
+    });
+    
+    var csgOfficeContent = '<div id="infoWindow" class="infoWindow">Colorado Sweetgold offices.</div>';
+
+    google.maps.event.addListener(csgOffice, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(csgOfficeContent);
+    });
+    
+    var bldgGContent = '<div id="infoWindow" class="infoWindow">Building "G"</div>';
+
+    google.maps.event.addListener(bldgG, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(bldgGContent);
+    });
+    
+    var bldgHContent = '<div id="infoWindow" class="infoWindow">Building "H"</div>';
+
+    google.maps.event.addListener(bldgH, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(bldgHContent);
+    });
+    
+    var nWsectionContent = '<div id="infoWindow" class="infoWindow">North West section. Close to highway.</div>';
+
+    google.maps.event.addListener(nWsection, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(nWsectionContent);
+    });
+    
+    var nSectionContent = '<div id="infoWindow" class="infoWindow">North section. Close to highway.</div>';
+
+    google.maps.event.addListener(nSection, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(nSectionContent);
+    });
+    
+    var cWsectionContent = '<div id="infoWindow" class="infoWindow">cWsection</div>';
+
+    google.maps.event.addListener(cWsection, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(cWsectionContent);
+    });
+    
+    var southSectionContent = '<div id="infoWindow" class="infoWindow">south section</div>';
+
+    google.maps.event.addListener(southSection, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(southSectionContent);
+    });
+    
+    var greenWayContent = '<div id="infoWindow" class="infoWindow">Greenway. Planned walking trails. Flood zone.</div>';
+
+    google.maps.event.addListener(greenWay, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(greenWayContent);
+    });
+    
+    var CenterSectionContent = '<div id="infoWindow" class="infoWindow">CenterSection. Acres of farm land. Available for lease.</div>';
+
+    google.maps.event.addListener(CenterSection, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(CenterSectionContent);
+    });
+    
+    var transLoadFacilityContent = '<div id="infoWindow" class="infoWindow">Transloading Facility</div>';
+
+    google.maps.event.addListener(transLoadFacility, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(transLoadFacilityContent);
+    });
+    
+    var northEastSectionContent = '<div id="infoWindow" class="infoWindow">Future Development</div>';
+
+    google.maps.event.addListener(northEastSection, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(northEastSectionContent);
+    });
+    
+    var btmDumpSectionContent = '<div id="infoWindow" class="infoWindow">Bottom Dump Railcar station.</div>';
+
+    google.maps.event.addListener(btmDumpSection, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(btmDumpSectionContent);
+    });
+    
+    var oilStorContent = '<div id="infoWindow" class="infoWindow">oil storage</div>';
 
     google.maps.event.addListener(oilStorSection, 'click', function(event) {
-        AnnexAreaInfoWindow.open(map);
-        AnnexAreaInfoWindow.setPosition(event.latLng);
-        AnnexAreaInfoWindow.setContent(oilStorContent);
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(oilStorContent);
     });
+    
+    var grainElevContent = '<div id="infoWindow" class="infoWindow">Grain Elevator</div>';
+
+    google.maps.event.addListener(grainElev, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(grainElevContent);
+    });
+
+    var bldgPContent = '<div id="infoWindow" class="infoWindow">Building "P"</div>';
+
+    google.maps.event.addListener(bldgP, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(bldgPContent);
+    });
+
+    var bldgIContent = '<div id="infoWindow" class="infoWindow">Building "I"</div>';
+
+    google.maps.event.addListener(bldgI, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(bldgIContent);
+    });
+
+    var bldgLContent = '<div id="infoWindow" class="infoWindow">Building "L"</div>';
+
+    google.maps.event.addListener(bldgL, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(bldgLContent);
+    });
+
+    var bldgJContent = '<div id="infoWindow" class="infoWindow">Building "J"</div>';
+
+    google.maps.event.addListener(bldgJ, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(bldgJContent);
+    });
+
+    var bldgKContent = '<div id="infoWindow" class="infoWindow">Building "K"</div>';
+
+    google.maps.event.addListener(bldgK, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(bldgKContent);
+    });
+
+    var truckScaleContent = '<div id="infoWindow" class="infoWindow">Truck Scale</div>';
+
+    google.maps.event.addListener(truckScale, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(truckScaleContent);
+    });
+    
+    
 }
 
 google.maps.event.addDomListener(window, 'load', init);
