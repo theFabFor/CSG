@@ -416,10 +416,10 @@ function init() {
     // Construct the water area polygon.
     waterArea = new google.maps.Polygon({
         paths: waterAreaCoords,
-        strokeColor: '#000099',
+        strokeColor: '#3333FF',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#000099',
+        fillColor: '#3333FF',
         fillOpacity: 0.35
     });
 
@@ -483,10 +483,10 @@ function init() {
     // Construct the eastNearRoad polygon.
     eastNearRoad = new google.maps.Polygon({
         paths: eastNearRoadCoords,
-        strokeColor: '#FF6600',
+        strokeColor: '#66FF66',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#FF6600',
+        fillColor: '#66FF66',
         fillOpacity: 0.35
     });
 
@@ -651,10 +651,10 @@ function init() {
     // Construct the nSection polygon.
     nSection = new google.maps.Polygon({
         paths: nSectionCoords,
-        strokeColor: '#FF6600',
+        strokeColor: '#66FF66',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#FF6600',
+        fillColor: '#66FF66',
         fillOpacity: 0.35
     });
 
@@ -1731,7 +1731,7 @@ function init() {
     var InfoWindow = new google.maps.InfoWindow({
     });
 
-    var railYardContent = '<div id="infoWindow" class="infoWindow">this is the rail yard</div>';
+    var railYardContent = '<div id="railYard" class="infoWindow">this is the rail yard<a href=#residential>More Info</a></div>';
 
     google.maps.event.addListener(railYard, 'click', function(event) {
         InfoWindow.open(map);
@@ -1739,7 +1739,7 @@ function init() {
         InfoWindow.setContent(railYardContent);
     });
 
-    var AnnexAreaContent = '<div id="infoWindow" class="infoWindow">this is the annexed piece</div>';
+    var AnnexAreaContent = '<div id="AnnexArea" class="infoWindow">this is the annexed piece</div>';
 
     google.maps.event.addListener(annexArea, 'click', function(event) {
         InfoWindow.open(map);
@@ -1747,7 +1747,7 @@ function init() {
         InfoWindow.setContent(AnnexAreaContent);
     });
     
-    var waterAreaContent = '<div id="infoWindow" class="infoWindow">this is the water storage and loading area</div>';
+    var waterAreaContent = '<div id="waterArea" class="infoWindow">this is the water storage and loading area</div>';
 
     google.maps.event.addListener(waterArea, 'click', function(event) {
         InfoWindow.open(map);
@@ -1755,7 +1755,7 @@ function init() {
         InfoWindow.setContent(waterAreaContent);
     });
     
-    var elecAreaContent = '<div id="infoWindow" class="infoWindow">14 Mega Watt sub-station. Built in 2008.</div>';
+    var elecAreaContent = '<div id="elecArea" class="infoWindow">14 Mega Watt sub-station. Built in 2008.</div>';
 
     google.maps.event.addListener(elecArea, 'click', function(event) {
         InfoWindow.open(map);
@@ -1763,7 +1763,7 @@ function init() {
         InfoWindow.setContent(elecAreaContent);
     });
     
-    var eastNearRoadContent = '<div id="infoWindow" class="infoWindow">1 to 8 seperate building sites. Direct access to county road. Raw ground or build to suit.</div>';
+    var eastNearRoadContent = '<div id="eastNearRoad" class="infoWindow">1 to 8 seperate building sites. Direct access to county road. Raw ground or build to suit.</div>';
 
     google.maps.event.addListener(eastNearRoad, 'click', function(event) {
         InfoWindow.open(map);
@@ -1771,7 +1771,7 @@ function init() {
         InfoWindow.setContent(eastNearRoadContent);
     });
     
-    var csgOfficeContent = '<div id="infoWindow" class="infoWindow">Colorado Sweetgold offices.</div>';
+    var csgOfficeContent = '<div id="csgOffice" class="infoWindow">Colorado Sweetgold offices.</div>';
 
     google.maps.event.addListener(csgOffice, 'click', function(event) {
         InfoWindow.open(map);
@@ -1779,7 +1779,7 @@ function init() {
         InfoWindow.setContent(csgOfficeContent);
     });
     
-    var bldgGContent = '<div id="infoWindow" class="infoWindow">Building "G"</div>';
+    var bldgGContent = '<div id="bldgG" class="infoWindow">Building "G"</div>';
 
     google.maps.event.addListener(bldgG, 'click', function(event) {
         InfoWindow.open(map);
@@ -1787,7 +1787,7 @@ function init() {
         InfoWindow.setContent(bldgGContent);
     });
     
-    var bldgHContent = '<div id="infoWindow" class="infoWindow">Building "H"</div>';
+    var bldgHContent = '<div id="bldgH" class="infoWindow">Building "H"</div>';
 
     google.maps.event.addListener(bldgH, 'click', function(event) {
         InfoWindow.open(map);
@@ -1795,7 +1795,7 @@ function init() {
         InfoWindow.setContent(bldgHContent);
     });
     
-    var nWsectionContent = '<div id="infoWindow" class="infoWindow">North West section. Close to highway.</div>';
+    var nWsectionContent = '<div id="nWsection" class="infoWindow">North West section. Close to highway.</div>';
 
     google.maps.event.addListener(nWsection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1803,7 +1803,7 @@ function init() {
         InfoWindow.setContent(nWsectionContent);
     });
     
-    var nSectionContent = '<div id="infoWindow" class="infoWindow">North section. Close to highway.</div>';
+    var nSectionContent = '<div id="nSection" class="infoWindow">North section. Close to highway.</div>';
 
     google.maps.event.addListener(nSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1811,7 +1811,7 @@ function init() {
         InfoWindow.setContent(nSectionContent);
     });
     
-    var cWsectionContent = '<div id="infoWindow" class="infoWindow">cWsection</div>';
+    var cWsectionContent = '<div id="cWsection" class="infoWindow">cWsection</div>';
 
     google.maps.event.addListener(cWsection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1819,7 +1819,7 @@ function init() {
         InfoWindow.setContent(cWsectionContent);
     });
     
-    var southSectionContent = '<div id="infoWindow" class="infoWindow">south section</div>';
+    var southSectionContent = '<div id="southSection" class="infoWindow">south section</div>';
 
     google.maps.event.addListener(southSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1827,7 +1827,7 @@ function init() {
         InfoWindow.setContent(southSectionContent);
     });
     
-    var greenWayContent = '<div id="infoWindow" class="infoWindow">Greenway. Planned walking trails. Flood zone.</div>';
+    var greenWayContent = '<div id="greenWay" class="infoWindow">Greenway. Planned walking trails. Flood zone.</div>';
 
     google.maps.event.addListener(greenWay, 'click', function(event) {
         InfoWindow.open(map);
@@ -1835,7 +1835,7 @@ function init() {
         InfoWindow.setContent(greenWayContent);
     });
     
-    var CenterSectionContent = '<div id="infoWindow" class="infoWindow">CenterSection. Acres of farm land. Available for lease.</div>';
+    var CenterSectionContent = '<div id="CenterSection" class="infoWindow">CenterSection. Acres of farm land. Available for lease.</div>';
 
     google.maps.event.addListener(CenterSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1843,7 +1843,7 @@ function init() {
         InfoWindow.setContent(CenterSectionContent);
     });
     
-    var transLoadFacilityContent = '<div id="infoWindow" class="infoWindow">Transloading Facility</div>';
+    var transLoadFacilityContent = '<div id="transLoadFacility" class="infoWindow">Transloading Facility</div>';
 
     google.maps.event.addListener(transLoadFacility, 'click', function(event) {
         InfoWindow.open(map);
@@ -1851,7 +1851,7 @@ function init() {
         InfoWindow.setContent(transLoadFacilityContent);
     });
     
-    var northEastSectionContent = '<div id="infoWindow" class="infoWindow">Future Development</div>';
+    var northEastSectionContent = '<div id="northEastSection" class="infoWindow">Future Development</div>';
 
     google.maps.event.addListener(northEastSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1859,7 +1859,7 @@ function init() {
         InfoWindow.setContent(northEastSectionContent);
     });
     
-    var btmDumpSectionContent = '<div id="infoWindow" class="infoWindow">Bottom Dump Railcar station.</div>';
+    var btmDumpSectionContent = '<div id="btmDumpSection" class="infoWindow">Bottom Dump Railcar station.</div>';
 
     google.maps.event.addListener(btmDumpSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1867,7 +1867,7 @@ function init() {
         InfoWindow.setContent(btmDumpSectionContent);
     });
     
-    var oilStorContent = '<div id="infoWindow" class="infoWindow">oil storage</div>';
+    var oilStorContent = '<div id="oilStor" class="infoWindow">oil storage</div>';
 
     google.maps.event.addListener(oilStorSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1875,7 +1875,7 @@ function init() {
         InfoWindow.setContent(oilStorContent);
     });
     
-    var grainElevContent = '<div id="infoWindow" class="infoWindow">Grain Elevator</div>';
+    var grainElevContent = '<div id="grainElev" class="infoWindow">Grain Elevator</div>';
 
     google.maps.event.addListener(grainElev, 'click', function(event) {
         InfoWindow.open(map);
@@ -1883,7 +1883,7 @@ function init() {
         InfoWindow.setContent(grainElevContent);
     });
 
-    var bldgPContent = '<div id="infoWindow" class="infoWindow">Building "P"</div>';
+    var bldgPContent = '<div id="bldgP" class="infoWindow">Building "P"</div>';
 
     google.maps.event.addListener(bldgP, 'click', function(event) {
         InfoWindow.open(map);
@@ -1891,7 +1891,7 @@ function init() {
         InfoWindow.setContent(bldgPContent);
     });
 
-    var bldgIContent = '<div id="infoWindow" class="infoWindow">Building "I"</div>';
+    var bldgIContent = '<div id="bldgI" class="infoWindow">Building "I"</div>';
 
     google.maps.event.addListener(bldgI, 'click', function(event) {
         InfoWindow.open(map);
@@ -1899,7 +1899,7 @@ function init() {
         InfoWindow.setContent(bldgIContent);
     });
 
-    var bldgLContent = '<div id="infoWindow" class="infoWindow">Building "L"</div>';
+    var bldgLContent = '<div id="bldgL" class="infoWindow">Building "L"</div>';
 
     google.maps.event.addListener(bldgL, 'click', function(event) {
         InfoWindow.open(map);
@@ -1907,7 +1907,7 @@ function init() {
         InfoWindow.setContent(bldgLContent);
     });
 
-    var bldgJContent = '<div id="infoWindow" class="infoWindow">Building "J"</div>';
+    var bldgJContent = '<div id="bldgJ" class="infoWindow">Building "J"</div>';
 
     google.maps.event.addListener(bldgJ, 'click', function(event) {
         InfoWindow.open(map);
@@ -1915,7 +1915,7 @@ function init() {
         InfoWindow.setContent(bldgJContent);
     });
 
-    var bldgKContent = '<div id="infoWindow" class="infoWindow">Building "K"</div>';
+    var bldgKContent = '<div id="bldgK" class="infoWindow">Building "K"</div>';
 
     google.maps.event.addListener(bldgK, 'click', function(event) {
         InfoWindow.open(map);
@@ -1923,7 +1923,7 @@ function init() {
         InfoWindow.setContent(bldgKContent);
     });
 
-    var truckScaleContent = '<div id="infoWindow" class="infoWindow">Truck Scale</div>';
+    var truckScaleContent = '<div id="truckScale" class="infoWindow">Truck Scale</div>';
 
     google.maps.event.addListener(truckScale, 'click', function(event) {
         InfoWindow.open(map);

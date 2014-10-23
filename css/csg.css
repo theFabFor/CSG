@@ -32,14 +32,14 @@ h6 {
 
 p {
     margin: 0 0 25px;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
 @media(min-width:767px) {
     p {
         margin: 0 0 35px;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.6;
     }
 }
@@ -271,7 +271,7 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 100px;
     }
 
     .download-section {
@@ -363,4 +363,16 @@ body {
 .infoWindow {
     color: #000000;
     height: 100px;
+}
+
+.images {
+/*    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex; /* add */
+/*    justify-content: center; /* add to align horizontal */
+/*    align-items: center; /* add to align vertical */
+    margin: 15 0 35px;
 }
