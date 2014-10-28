@@ -45,20 +45,34 @@ function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
+        // How zoomed in the initial maps should be
         zoom: 16,
 
-        // The latitude and longitude to center the map (always required)
+        // user controled zoom
+        zoomControl: true,
+
+        // zoom control size
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL
+        },
+
+        // map type control disabled
+        mapTypeControl: false,
+
+        // The latitude and longitude to center the map
         center: mapLatlng,
 
+        // makes satellite view the default view
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
+
         // Disables the default Google Maps UI components
-        disableDefaultUI: true,
+        // disableDefaultUI: true,
         scrollwheel: false,
         //draggable: false,
 
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
-        styles: [{
+    /*    styles: [{
             "featureType": "water",
             "elementType": "geometry",
             "stylers": [{
@@ -165,7 +179,7 @@ function init() {
             }, {
                 "weight": 1.2
             }]
-        }]
+        }]*/
     };
 
     // Get the HTML DOM element that will contain your map 
@@ -1763,7 +1777,7 @@ function init() {
         InfoWindow.setContent(elecAreaContent);
     });
     
-    var eastNearRoadContent = '<div id="eastNearRoad" class="infoWindow">1 to 8 seperate building sites. Direct access to county road. Raw ground or build to suit.</div>';
+    var eastNearRoadContent = '<div id="eastNearRoad" class="infoWindow">1 to 8 seperate building sites. Direct access to county road. Raw ground or build to suit. 11.5 acres</div>';
 
     google.maps.event.addListener(eastNearRoad, 'click', function(event) {
         InfoWindow.open(map);
@@ -1795,7 +1809,7 @@ function init() {
         InfoWindow.setContent(bldgHContent);
     });
     
-    var nWsectionContent = '<div id="nWsection" class="infoWindow">North West section. Close to highway.</div>';
+    var nWsectionContent = '<div id="nWsection" class="infoWindow"><p>North West section. Close to highway. 20.9 acres.<a href="#railyard">Railyard</a></p></div>';
 
     google.maps.event.addListener(nWsection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1811,7 +1825,7 @@ function init() {
         InfoWindow.setContent(nSectionContent);
     });
     
-    var cWsectionContent = '<div id="cWsection" class="infoWindow">cWsection</div>';
+    var cWsectionContent = '<div id="cWsection" class="infoWindow"><p>cWsection</p></div>';
 
     google.maps.event.addListener(cWsection, 'click', function(event) {
         InfoWindow.open(map);

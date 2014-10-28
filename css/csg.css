@@ -112,13 +112,9 @@ a:focus {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 20px 0;
+        padding: 0px 0;
         border-bottom: 0;
         letter-spacing: 1px;
-        background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
 
     .top-nav-collapse {
@@ -267,6 +263,7 @@ a:focus {
 #map {
     width: 100%;
     height: 400px;
+    top: 50px;
 }
 
 @media(min-width:767px) {
@@ -280,6 +277,7 @@ a:focus {
 
     #map {
         height: 600px;
+        top: 50px;
     }
 }
 
@@ -363,6 +361,18 @@ body {
 .infoWindow {
     color: #000000;
     height: 100px;
+}
+
+.infowindow.p {
+    margin: 0 0 25px;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.infowindow.h6 {
+    margin: 0 0 25px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .images {
