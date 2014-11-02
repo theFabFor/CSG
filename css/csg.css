@@ -20,25 +20,38 @@ html {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-    margin: 0 0 35px;
+h4 {
+    margin: 0 0 5px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+h5 {
+    margin: 0 0 5px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
+h6 {
+    margin: 0 0 5px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 020;
+    letter-spacing: 1px;
+}
+
 p {
-    margin: 0 0 25px;
+    margin: 0 0 5px; /*changed from 25 to fix map infoWindows*/
     font-size: 14px;
     line-height: 1.5;
 }
 
 @media(min-width:767px) {
     p {
-        margin: 0 0 35px;
+        margin: 0 0 5px; /*changed from 35 to fix map infoWindows*/
         font-size: 16px;
         line-height: 1.6;
     }
@@ -360,19 +373,26 @@ body {
 
 .infoWindow {
     color: #000000;
-    height: 100px;
-}
-
-.infowindow.p {
-    margin: 0 0 25px;
     font-size: 10px;
-    line-height: 1.5;
+    width: 140px;
 }
 
-.infowindow.h6 {
-    margin: 0 0 25px;
-    font-size: 14px;
-    line-height: 1.5;
+.infowindow p {
+    margin: 0 0 0px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    line-height: 0.3;
+}
+
+.infowindow h6 {
+    margin: 0 0 5px;
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    line-height: 0.3;
+}
+
+#AnnexArea {
+    width: 140px;
 }
 
 .images {
