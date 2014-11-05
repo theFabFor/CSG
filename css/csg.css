@@ -406,3 +406,14 @@ body {
 /*    align-items: center; /* add to align vertical */
     margin: 15 0 35px;
 }
+
+.margins {
+    margin-bottom: 18px;
+}
+
+.leadingWord {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
