@@ -1769,7 +1769,7 @@ function init() {
         InfoWindow.setContent(waterAreaContent);
     });
     
-    var elecAreaContent = '<div id="elecArea" class="infoWindow"><h5>64 kW sub-station</h5><h6>built in the mid 1990s</h6><h6>natural gas, city sewer & water also available</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></div>';
+    var elecAreaContent = '<div id="elecArea" class="infoWindow"><h5>64 mW sub-station</h5><h6>built in the mid 1990s</h6><h6>natural gas, city sewer & water also available</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></div>';
 
     google.maps.event.addListener(elecArea, 'click', function(event) {
         InfoWindow.open(map);
@@ -1785,7 +1785,7 @@ function init() {
         InfoWindow.setContent(eastNearRoadContent);
     });
     
-    var csgOfficeContent = '<div id="csgOffice" class="infoWindow"><h5>Colorado Sweet Gold offices</h5><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>email</h6></a><h6>8714 Colorado 60, Johnstown, CO</h6></div>';
+    var csgOfficeContent = '<div id="csgOffice" class="infoWindow"><h5>Colorado Sweet Gold offices</h5><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>email</h6></a><h6>8714 Colorado 60, Johnstown, CO 80534</h6></div>';
 
     google.maps.event.addListener(csgOffice, 'click', function(event) {
         InfoWindow.open(map);
@@ -1881,7 +1881,7 @@ function init() {
         InfoWindow.setContent(btmDumpSectionContent);
     });
     
-    var oilStorContent = '<div id="oilStor" class="infoWindow"><h5>Oil Storage</h5><h6>2 - 1 million Gallon tanks</h6><h6>1- 350,000 gallon tank</h6><h6>Rail car access</h6><h6>Truck access</h6><a href=#facilities><h6>More Info</h6></a><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></a></div>';
+    var oilStorContent = '<div id="oilStor" class="infoWindow"><h5>Oil Storage</h5><h6>2 - 1 million Gallon tanks</h6><h6>1- 350,000 gallon tank</h6><h6>Rail car access</h6><h6>Truck access</h6><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></a></div>';
 
     google.maps.event.addListener(oilStorSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1913,7 +1913,7 @@ function init() {
         InfoWindow.setContent(bldgIContent);
     });
 
-    var bldgLContent = '<div id="bldgL" class="infoWindow"><h5>Commodities warehouse</h5><h6>11,325 Square Feet</h6><h6>Rail & truck dock</h6><h6>Phone inquiries <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>email inquiries</h6></div>';
+    var bldgLContent = '<div id="bldgL" class="infoWindow"><h5>Commodities warehouse</h5><h6>11,325 Square Feet</h6><h6>Rail & truck dock</h6><h6>Leased till 2019</h6></div>';
 
     google.maps.event.addListener(bldgL, 'click', function(event) {
         InfoWindow.open(map);
@@ -1921,7 +1921,7 @@ function init() {
         InfoWindow.setContent(bldgLContent);
     });
 
-    var bldgJContent = '<div id="bldgJ" class="infoWindow"><h5>Brick warehouse</h5><h6>18,439 Square Feet</h6><h6>Rail & truck dock</h6><h6>Infrared heating</h6><h6>440 3 phase elec.</h6><h6>City utilities</h6><h6>Offices</h6><h6><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></div>';
+    var bldgJContent = '<div id="bldgJ" class="infoWindow"><h5>Warehouse</h5><h6>6,000 Square Feet</h6><h6>Vehicle access</h6><h6>440 3 phase elec.</h6><h6>City utilities</h6><h6>Offices</h6><h6><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></div>';
 
     google.maps.event.addListener(bldgJ, 'click', function(event) {
         InfoWindow.open(map);
