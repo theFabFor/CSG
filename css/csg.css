@@ -417,9 +417,10 @@ body {
     margin-bottom: 18px;
 }
 
-.leadingWord {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    font-size: 14px;
+.dropCap {
+    float: left;
+    color: #666;
+    font-size: 53px;
+    line-height: 50px;
+    padding: 0 2px 0 0;
 }

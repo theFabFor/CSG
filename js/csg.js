@@ -1745,7 +1745,7 @@ function init() {
     var InfoWindow = new google.maps.InfoWindow({
     });
 
-    var railYardContent = '<div id="railYard" class="infoWindow"><h5>Railyard</h5><h6>Two on-site locomotives</h6><h6>Transloading</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></a><a href=#facilities><h6>More Info</h6></a></div>';
+    var railYardContent = '<div id="railYard" class="infoWindow"><h5>Railyard</h5><h6>Two on-site locomotives</h6><h6>Transloading</h6><a href="#contact"><h6>Inquiries</h6></a><a href=#facilities><h6>More Info</h6></a></div>';
 
     google.maps.event.addListener(railYard, 'click', function(event) {
         InfoWindow.open(map);
@@ -1761,7 +1761,7 @@ function init() {
         InfoWindow.setContent(AnnexAreaContent);
     });
     
-    var waterAreaContent = '<div id="waterArea" class="infoWindow"><h5>Water sales & storage</h5><h6>Multiple Sources</h6><h6>600 gpm loading facility</h6><h6>183 ac.ft. storage</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></div>';
+    var waterAreaContent = '<div id="waterArea" class="infoWindow"><h5>Water sales & storage</h5><h6>Multiple Sources</h6><h6>600 gpm loading facility</h6><h6>183 ac.ft. storage</h6><a href="#contact"><h6>Inquiries</h6></div>';
 
     google.maps.event.addListener(waterArea, 'click', function(event) {
         InfoWindow.open(map);
@@ -1769,7 +1769,7 @@ function init() {
         InfoWindow.setContent(waterAreaContent);
     });
     
-    var elecAreaContent = '<div id="elecArea" class="infoWindow"><h5>64 mW sub-station</h5><h6>built in the mid 1990s</h6><h6>natural gas, city sewer & water also available</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></div>';
+    var elecAreaContent = '<div id="elecArea" class="infoWindow"><h5>64 mW sub-station</h5><h6>built in the mid 1990s</h6><h6>natural gas, city sewer & water also available</h6><a href="#contact"><h6>Inquiries</h6></div>';
 
     google.maps.event.addListener(elecArea, 'click', function(event) {
         InfoWindow.open(map);
@@ -1777,7 +1777,7 @@ function init() {
         InfoWindow.setContent(elecAreaContent);
     });
     
-    var eastNearRoadContent = '<div id="eastNearRoad" class="infoWindow"><h5>7.1 acres potential industrial</h5><h6>county road 19 frontage</h6><h6>All or part</h6><h6>Land lease / build to suite</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></div>';
+    var eastNearRoadContent = '<div id="eastNearRoad" class="infoWindow"><h5>7.1 acres potential industrial</h5><h6>county road 19 frontage</h6><h6>All or part</h6><h6>Land lease / build to suite</h6><a href="#contact"><h6>Inquiries</h6></div>';
 
     google.maps.event.addListener(eastNearRoad, 'click', function(event) {
         InfoWindow.open(map);
@@ -1785,7 +1785,7 @@ function init() {
         InfoWindow.setContent(eastNearRoadContent);
     });
     
-    var csgOfficeContent = '<div id="csgOffice" class="infoWindow"><h5>Colorado Sweet Gold offices</h5><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>email</h6></a><h6>8714 Colorado 60, Johnstown, CO 80534</h6></div>';
+    var csgOfficeContent = '<div id="csgOffice" class="infoWindow"><h5>Colorado Sweet Gold offices</h5><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="#contact"><h6>Inquiries</h6></a><h6>8714 Colorado 60, Johnstown, CO 80534</h6></div>';
 
     google.maps.event.addListener(csgOffice, 'click', function(event) {
         InfoWindow.open(map);
@@ -1793,7 +1793,7 @@ function init() {
         InfoWindow.setContent(csgOfficeContent);
     });
     
-    var bldgGContent = '<div id="bldgG" class="infoWindow"><h5>Office Building</h5><h6>2400 sq. ft.</h6><h6>full basement</h6><h6>Leased till 2019</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></div>';
+    var bldgGContent = '<div id="bldgG" class="infoWindow"><h5>Office Building</h5><h6>2400 sq. ft.</h6><h6>full basement</h6><h6>Leased till 2019</h6><a href="#contact"><h6>Inquiries</h6></div>';
 
     google.maps.event.addListener(bldgG, 'click', function(event) {
         InfoWindow.open(map);
@@ -1801,7 +1801,7 @@ function init() {
         InfoWindow.setContent(bldgGContent);
     });
     
-    var bldgHContent = '<div id="bldgH" class="infoWindow"><h5>Office Building</h5><h6>Leased till 2019</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></div>';
+    var bldgHContent = '<div id="bldgH" class="infoWindow"><h5>Office Building</h5><h6>Leased till 2019</h6><a href="#contact"><h6>Inquiries</h6></div>';
 
     google.maps.event.addListener(bldgH, 'click', function(event) {
         InfoWindow.open(map);
@@ -1809,7 +1809,7 @@ function init() {
         InfoWindow.setContent(bldgHContent);
     });
     
-    var nWsectionContent = '<div id="nWsection" class="infoWindow"><h5>20.9 Acres</h5><h6>Potential Industrial</h6><h6>Land Lease / Build to suit</h6><h6>All or part</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></div>';
+    var nWsectionContent = '<div id="nWsection" class="infoWindow"><h5>20.9 Acres</h5><h6>Potential Industrial</h6><h6>Land Lease / Build to suit</h6><h6>All or part</h6><a href="#contact"><h6>Inquiries</h6></div>';
 
     google.maps.event.addListener(nWsection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1817,7 +1817,7 @@ function init() {
         InfoWindow.setContent(nWsectionContent);
     });
     
-    var nSectionContent = '<div id="nSection" class="infoWindow"><h5>North section</h5><h6>Highway Frontage</h6><h6>Available</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></a></div>';
+    var nSectionContent = '<div id="nSection" class="infoWindow"><h5>North section</h5><h6>Highway Frontage</h6><h6>Available</h6><a href="#contact"><h6>Inquiries</h6></a></div>';
 
     google.maps.event.addListener(nSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1825,7 +1825,7 @@ function init() {
         InfoWindow.setContent(nSectionContent);
     });
     
-    var cWsectionContent = '<div id="cWsection" class="infoWindow"><h5>Ag Use</h5><h6>18.9 acres</h6><h6>Annual lease</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></a></div>';
+    var cWsectionContent = '<div id="cWsection" class="infoWindow"><h5>Ag Use</h5><h6>18.9 acres</h6><h6>Annual lease</h6><a href="#contact"><h6>Inquiries</h6></a></div>';
 
     google.maps.event.addListener(cWsection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1833,7 +1833,7 @@ function init() {
         InfoWindow.setContent(cWsectionContent);
     });
     
-    var southSectionContent = '<div id="southSection" class="infoWindow"><h5>Ag Use</h5><h6>24.6 acres</h6><h6>Annual lease</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></a></div>';
+    var southSectionContent = '<div id="southSection" class="infoWindow"><h5>Ag Use</h5><h6>24.6 acres</h6><h6>Annual lease</h6><a href="#contact"><h6>Inquiries</h6></a></div>';
 
     google.maps.event.addListener(southSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1849,7 +1849,7 @@ function init() {
         InfoWindow.setContent(greenWayContent);
     });
     
-    var CenterSectionContent = '<div id="CenterSection" class="infoWindow"><h5>Ag Use</h5><h6>25.5 acres</h6><h6>Annual lease</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>Inquiries</h6></a></div>';
+    var CenterSectionContent = '<div id="CenterSection" class="infoWindow"><h5>Ag Use</h5><h6>25.5 acres</h6><h6>Annual lease</h6><a href="#contact"><h6>Inquiries</h6></a></div>';
 
     google.maps.event.addListener(CenterSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1857,7 +1857,7 @@ function init() {
         InfoWindow.setContent(CenterSectionContent);
     });
     
-    var transLoadFacilityContent = '<div id="transLoadFacility" class="infoWindow"><h5>Transloading Facility</h5><h6>Manned Locomotives</h6><h6>Oil Storage</h6><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></a></div>';
+    var transLoadFacilityContent = '<div id="transLoadFacility" class="infoWindow"><h5>Transloading Facility</h5><h6>Manned Locomotives</h6><h6>Oil Storage</h6><a href="#contact"><h6>inquiries</h6></a></div>';
 
     google.maps.event.addListener(transLoadFacility, 'click', function(event) {
         InfoWindow.open(map);
@@ -1873,7 +1873,7 @@ function init() {
         InfoWindow.setContent(northEastSectionContent);
     });
     
-    var btmDumpSectionContent = '<div id="btmDumpSection" class="infoWindow"><h5>Bottom Dump rail car station</h5><h6>elevator</h6><h6>dry material transfer</h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></a></div>';
+    var btmDumpSectionContent = '<div id="btmDumpSection" class="infoWindow"><h5>Bottom Dump rail car station</h5><h6>elevator</h6><h6>dry material transfer</h6><a href="#contact"><h6>inquiries</h6></a></div>';
 
     google.maps.event.addListener(btmDumpSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1881,7 +1881,7 @@ function init() {
         InfoWindow.setContent(btmDumpSectionContent);
     });
     
-    var oilStorContent = '<div id="oilStor" class="infoWindow"><h5>Oil Storage</h5><h6>2 - 1 million Gallon tanks</h6><h6>1- 350,000 gallon tank</h6><h6>Rail car access</h6><h6>Truck access</h6><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></a></div>';
+    var oilStorContent = '<div id="oilStor" class="infoWindow"><h5>Liquid Storage</h5><h6>2 - 1 million Gallon tanks</h6><h6>1- 350,000 gallon tank</h6><h6>Rail car access</h6><h6>Truck access</h6><a><a href="#contact"><h6>inquiries</h6></a></div>';
 
     google.maps.event.addListener(oilStorSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1897,7 +1897,7 @@ function init() {
         InfoWindow.setContent(grainElevContent);
     });
 
-    var bldgPContent = '<div id="bldgP" class="infoWindow"><h5>Brick warehouse</h5><h6>18,439 Square Feet</h6><h6>Rail & truck dock</h6><h6>Infrared heating</h6><h6>440 3 phase elec.</h6><h6>City utilities</h6><h6>Offices</h6><h6><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></div>';
+    var bldgPContent = '<div id="bldgP" class="infoWindow"><h5>Brick warehouse</h5><h6>18,439 Square Feet</h6><h6>Rail & truck dock</h6><h6>Infrared heating</h6><h6>440 3 phase elec.</h6><h6>City utilities</h6><h6>Offices</h6><h6><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="#contact"><h6>inquiries</h6></div>';
 
     google.maps.event.addListener(bldgP, 'click', function(event) {
         InfoWindow.open(map);
@@ -1905,7 +1905,7 @@ function init() {
         InfoWindow.setContent(bldgPContent);
     });
 
-    var bldgIContent = '<div id="bldgI" class="infoWindow"><h5>Aggie bldg.</h5><h6>4,169 Square Feet</h6><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></div>';
+    var bldgIContent = '<div id="bldgI" class="infoWindow"><h5>Aggie bldg.</h5><h6>4,169 Square Feet</h6><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="#contact"><h6>inquiries</h6></div>';
 
     google.maps.event.addListener(bldgI, 'click', function(event) {
         InfoWindow.open(map);
@@ -1921,7 +1921,7 @@ function init() {
         InfoWindow.setContent(bldgLContent);
     });
 
-    var bldgJContent = '<div id="bldgJ" class="infoWindow"><h5>Warehouse</h5><h6>6,000 Square Feet</h6><h6>Vehicle access</h6><h6>440 3 phase elec.</h6><h6>City utilities</h6><h6>Offices</h6><h6><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></div>';
+    var bldgJContent = '<div id="bldgJ" class="infoWindow"><h5>Warehouse</h5><h6>6,000 Square Feet</h6><h6>Vehicle access</h6><h6>440 3 phase elec.</h6><h6>City utilities</h6><h6>Offices</h6><h6><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="#contact"><h6>inquiries</h6></div>';
 
     google.maps.event.addListener(bldgJ, 'click', function(event) {
         InfoWindow.open(map);
@@ -1929,7 +1929,7 @@ function init() {
         InfoWindow.setContent(bldgJContent);
     });
 
-    var bldgKContent = '<div id="bldgK" class="infoWindow"><h5>Brick warehouse</h5><h6>18,439 Square Feet</h6><h6>Rail & truck dock</h6><h6>Infrared heating</h6><h6>440 3 phase elec.</h6><h6>City utilities</h6><h6>Offices</h6><h6><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="mailto:inquiries@coloradosweetgold.com"><h6>inquiries</h6></div>';
+    var bldgKContent = '<div id="bldgK" class="infoWindow"><h5>Brick warehouse</h5><h6>18,439 Square Feet</h6><h6>Rail & truck dock</h6><h6>Infrared heating</h6><h6>440 3 phase elec.</h6><h6>City utilities</h6><h6>Offices</h6><h6><a><h6>Phone <span itemprop="telephone"><a href="tel:+19705876528">(970) 587-6528</a></span></h6><a href="#contact"><h6>inquiries</h6></div>';
 
     google.maps.event.addListener(bldgK, 'click', function(event) {
         InfoWindow.open(map);
