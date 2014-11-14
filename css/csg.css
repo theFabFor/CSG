@@ -419,8 +419,21 @@ body {
 
 .dropCap {
     float: left;
-    color: #666;
+    color: #999;
     font-size: 53px;
     line-height: 50px;
     padding: 0 2px 0 0;
+}
+p.dropCap:first-letter {
+    float: left;
+    color: #444;
+    font-size: 53px;
+    line-height: 50px;
+    padding: 0 2px 0 0;
+}
+.leadingWord {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 14px;
 }
