@@ -348,10 +348,10 @@ function init() {
     // Construct the annex polygon.
     annexArea = new google.maps.Polygon({
         paths: annexAreaCoords,
-        strokeColor: '#FF0000',
+        strokeColor: '#663399',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#FF0000',
+        fillColor: '#663399',
         fillOpacity: 0.35
     });
 
@@ -497,10 +497,10 @@ function init() {
     // Construct the eastNearRoad polygon.
     eastNearRoad = new google.maps.Polygon({
         paths: eastNearRoadCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF6600',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF6600',
         fillOpacity: 0.35
     });
 
@@ -635,10 +635,10 @@ function init() {
     // Construct the nWsection polygon.
     nWsection = new google.maps.Polygon({
         paths: nWsectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF6600',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF6600',
         fillOpacity: 0.35
     });
 
@@ -665,10 +665,10 @@ function init() {
     // Construct the nSection polygon.
     nSection = new google.maps.Polygon({
         paths: nSectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF6600',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF6600',
         fillOpacity: 0.35
     });
 
@@ -724,10 +724,10 @@ function init() {
     // Construct the cWsection polygon.
     cWsection = new google.maps.Polygon({
         paths: cWsectionCoords,
-        strokeColor: '#FF6600',
+        strokeColor: '#66FF66',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#FF6600',
+        fillColor: '#66FF66',
         fillOpacity: 0.35
     });
 
@@ -828,10 +828,10 @@ function init() {
     // Construct the southSection polygon.
     southSection = new google.maps.Polygon({
         paths: southSectionCoords,
-        strokeColor: '#FF6600',
+        strokeColor: '#66FF66',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#FF6600',
+        fillColor: '#66FF66',
         fillOpacity: 0.35
     });
 
@@ -1058,10 +1058,10 @@ function init() {
     // Construct the CenterSection polygon.
     CenterSection = new google.maps.Polygon({
         paths: CenterSectionCoords,
-        strokeColor: '#FF6600',
+        strokeColor: '#66FF66',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#FF6600',
+        fillColor: '#66FF66',
         fillOpacity: 0.35
     });
 
@@ -1154,10 +1154,10 @@ function init() {
     // Construct the northEastSection polygon.
     northEastSection = new google.maps.Polygon({
         paths: northEastSectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF6600',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF6600',
         fillOpacity: 0.35
     });
 
@@ -1174,10 +1174,10 @@ function init() {
     // Construct the grainStorageSection polygon.
     grainStorageSection = new google.maps.Polygon({
         paths: grainStorageSectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF6600',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF6600',
         fillOpacity: 0.35
     });
 
@@ -1194,10 +1194,10 @@ function init() {
     // Construct the nearSubstationSection polygon.
     nearSubstationSection = new google.maps.Polygon({
         paths: nearSubstationSectionCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF6600',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF6600',
         fillOpacity: 0.35
     });
 
