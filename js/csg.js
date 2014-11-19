@@ -5,13 +5,13 @@
  */
 
 // jQuery to collapse the navbar on scroll
-/*$(window).scroll(function() {
+$(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
-});*/
+});
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -222,10 +222,10 @@ function init() {
     // Construct the railYard polygon.
     railYard = new google.maps.Polygon({
         paths: railYardCoords,
-        strokeColor: '#999933',
+        strokeColor: '#f1ff32',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#999933',
+        fillColor: '#f1ff32',
         fillOpacity: 0.35
     });
 
@@ -455,10 +455,10 @@ function init() {
     // Construct the polygon.
     elecArea = new google.maps.Polygon({
         paths: elecAreaCoords,
-        strokeColor: '#CCFF33',
+        strokeColor: '#f1ff32',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#CCFF33',
+        fillColor: '#f1ff32',
         fillOpacity: 0.35
     });
 
@@ -1107,11 +1107,11 @@ function init() {
     // Construct the transLoadFacility polygon.
     transLoadFacility = new google.maps.Polygon({
         paths: transLoadFacilityCoords,
-        strokeColor: '#999933',
+        strokeColor: '#f1ff32',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#999933',
-        fillOpacity: 0.75
+        fillColor: '#f1ff32',
+        fillOpacity: 0.5
     });
 
    transLoadFacility.setMap(map);
@@ -1237,10 +1237,10 @@ function init() {
     // Construct the btmDumpSection polygon.
     btmDumpSection = new google.maps.Polygon({
         paths: btmDumpSectionCoords,
-        strokeColor: '#00FFCC',
+        strokeColor: '#f1ff32',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#00FFCC',
+        fillColor: '#f1ff32',
         fillOpacity: 0.5
     });
 
@@ -1272,10 +1272,10 @@ function init() {
     // Construct the oilStorSection polygon.
     oilStorSection = new google.maps.Polygon({
         paths: oilStorSectionCoords,
-        strokeColor: '#663399',
+        strokeColor: '#f1ff32',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#663399',
+        fillColor: '#f1ff32',
         fillOpacity: 0.5
     });
 
@@ -1311,10 +1311,10 @@ function init() {
     // Construct the grainElev polygon.
     grainElev = new google.maps.Polygon({
         paths: grainElevCoords,
-        strokeColor: '#FFFF00',
+        strokeColor: '#f1ff32',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#FFFF00',
+        fillColor: '#f1ff32',
         fillOpacity: 0.5
     });
 
