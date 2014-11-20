@@ -517,10 +517,10 @@ function init() {
     // Construct the csgOffice polygon.
     csgOffice = new google.maps.Polygon({
         paths: csgOfficeCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF0000',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF0000',
         fillOpacity: 0.35
     });
 
@@ -1460,10 +1460,10 @@ function init() {
     // Construct the truckScale polygon.
     truckScale = new google.maps.Polygon({
         paths: truckScaleCoords,
-        strokeColor: '#66FF66',
+        strokeColor: '#FF0000',
         strokeOpacity: 0.8,
         strokeWeight: 1,
-        fillColor: '#66FF66',
+        fillColor: '#FF0000',
         fillOpacity: 0.35
     });
 
@@ -1964,13 +1964,38 @@ function init() {
     });
     
     var northEastSectionContent = '<div id="northEastSection" class="infoWindow">\
-        <h5>Occupied</h5>\
-        <h6>11.5 acres</h6></div>';
+        <h5>Open ground</h5>\
+        <h6>5 acres</h6>\
+        <h6>available</h6>\
+        <h6><a href="#contact">inquiries</a></h6></div>';
 
     google.maps.event.addListener(northEastSection, 'click', function(event) {
         InfoWindow.open(map);
         InfoWindow.setPosition(event.latLng);
         InfoWindow.setContent(northEastSectionContent);
+    });
+    
+    var grainStorageSectionContent = '<div id="grainStorageSection" class="infoWindow">\
+        <h5>Open Ground</h5>\
+        <h6>5 acres</h6>\
+        <h6>Occupied</h6></div>';
+
+    google.maps.event.addListener(grainStorageSection, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(grainStorageSectionContent);
+    });
+    
+    var nearSubstationSectionContent = '<div id="nearSubstationSection" class="infoWindow">\
+        <h5>Open ground</h5>\
+        <h6>Approx. 2 acres</h6>\
+        <h6>available</h6>\
+        <h6><a href="#contact">inquiries</a></h6></div>';
+
+    google.maps.event.addListener(nearSubstationSection, 'click', function(event) {
+        InfoWindow.open(map);
+        InfoWindow.setPosition(event.latLng);
+        InfoWindow.setContent(nearSubstationSectionContent);
     });
     
     var btmDumpSectionContent = '<div id="btmDumpSection" class="infoWindow">\
