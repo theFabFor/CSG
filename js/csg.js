@@ -70,116 +70,7 @@ function init() {
         scrollwheel: false,
         //draggable: false,
 
-        // How you would like to style the map. 
-        // This is where you would paste any style found on Snazzy Maps.
-    /*    styles: [{
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }]
-        }, {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 29
-            }, {
-                "weight": 0.2
-            }]
-        }, {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 18
-            }]
-        }, {
-            "featureType": "road.local",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 21
-            }]
-        }, {
-            "elementType": "labels.text.stroke",
-            "stylers": [{
-                "visibility": "on"
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "elementType": "labels.text.fill",
-            "stylers": [{
-                "saturation": 36
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 40
-            }]
-        }, {
-            "elementType": "labels.icon",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "transit",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#FF0000"
-            }, {
-                "lightness": 19
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }, {
-                "weight": 1.2
-            }]
-        }]*/
+
     };
 
     // Get the HTML DOM element that will contain your map 
@@ -1830,10 +1721,12 @@ function init() {
     });
     
     var eastNearRoadContent = '<div id="eastNearRoad" class="infoWindow">\
-        <h5>7.1 acres potential industrial</h5>\
-        <h6>county road 19 frontage</h6>\
+        <h5>7.1 acres</h5>\
+        <h6>County road 19 frontage</h6>\
+        <h6>Open ground</h6>\
+        <h6>Available for industrial use</h6>\
+        <h6>Land Lease / Build to suit</h6>\
         <h6>All or part</h6>\
-        <h6>Land lease / build to suite</h6>\
         <h6><a href="#contact">Inquiries</a></h6></div>';
 
     google.maps.event.addListener(eastNearRoad, 'click', function(event) {
@@ -1879,7 +1772,8 @@ function init() {
     
     var nWsectionContent = '<div id="nWsection" class="infoWindow">\
         <h5>20.9 Acres</h5>\
-        <h6>Potential Industrial</h6>\
+        <h6>Open ground</h6>\
+        <h6>Available for industrial use</h6>\
         <h6>Land Lease / Build to suit</h6>\
         <h6>All or part</h6>\
         <h6><a href="#contact">Inquiries</a></h6></div>';
@@ -1891,9 +1785,11 @@ function init() {
     });
     
     var nSectionContent = '<div id="nSection" class="infoWindow">\
-        <h5>North section</h5>\
-        <h6>Highway Frontage</h6>\
-        <h6>Available</h6>\
+        <h5>Highway Frontage</h5>\
+        <h6>Open ground</h6>\
+        <h6>Available for industrial use</h6>\
+        <h6>Land Lease / Build to suit</h6>\
+        <h6>All or part</h6>\
         <h6><a href="#contact">Inquiries</a></h6></div>';
 
     google.maps.event.addListener(nSection, 'click', function(event) {
@@ -1903,9 +1799,9 @@ function init() {
     });
     
     var cWsectionContent = '<div id="cWsection" class="infoWindow">\
-        <h5>Ag Use</h5>\
-        <h6>18.9 acres</h6>\
-        <h6>Annual lease</h6>\
+        <h5>18.9 acres</h5>\
+        <h6>Open ground</h6>\
+        <h6>Potential ag or industrial use</h6>\
         <h6><a href="#contact">Inquiries</a></h6></div>';
 
     google.maps.event.addListener(cWsection, 'click', function(event) {
@@ -1915,9 +1811,9 @@ function init() {
     });
     
     var southSectionContent = '<div id="southSection" class="infoWindow">\
-        <h5>Ag Use</h5>\
-        <h6>24.6 acres</h6>\
-        <h6>Annual lease</h6>\
+        <h5>24.6 acres</h5>\
+        <h6>Open ground</h6>\
+        <h6>Potential ag or industrial use</h6>\
         <h6><a href="#contact">Inquiries</a></h6></div>';
 
     google.maps.event.addListener(southSection, 'click', function(event) {
@@ -1927,11 +1823,11 @@ function init() {
     });
     
     var greenWayContent = '<div id="greenWay" class="infoWindow">\
-    <h5>Greenway</h5>\
-    <h6><a href="http://en.wikipedia.org/wiki/Little_Thompson_River"\
-    target="blank">Little Thompson River</a></h6>\
-    <h6><a href="http://www.townofjohnstown.com/documents/12/jm%20master%20plan%20with%20maps.pdf"\
-     target="_blank">Proposed nature trail</a></h6></div>';
+        <h5>Greenway</h5>\
+        <h6><a href="http://en.wikipedia.org/wiki/Little_Thompson_River"\
+        target="blank">Little Thompson River</a></h6>\
+        <h6><a href="http://www.townofjohnstown.com/documents/12/jm%20master%20plan%20with%20maps.pdf"\
+        target="_blank">Proposed nature trail</a></h6></div>';
 
     google.maps.event.addListener(greenWay, 'click', function(event) {
         InfoWindow.open(map);
@@ -1940,9 +1836,9 @@ function init() {
     });
     
     var CenterSectionContent = '<div id="CenterSection" class="infoWindow">\
-    <h5>Ag Use</h5>\
-    <h6>25.5 acres</h6>\
-    <h6>Annual lease</h6>\
+    <h5>25.5 acres</h5>\
+    <h6>Open ground</h6>\
+    <h6>Potential ag or industrial use</h6>\
     <h6><a href="#contact">Inquiries</a></h6></div>';
 
     google.maps.event.addListener(CenterSection, 'click', function(event) {
@@ -1964,9 +1860,11 @@ function init() {
     });
     
     var northEastSectionContent = '<div id="northEastSection" class="infoWindow">\
-        <h5>Open ground</h5>\
-        <h6>5 acres</h6>\
-        <h6>available</h6>\
+        <h5>5 acres</h5>\
+        <h6>Open ground</h6>\
+        <h6>Available for industrial use</h6>\
+        <h6>Land Lease / Build to suit</h6>\
+        <h6>All or part</h6>\
         <h6><a href="#contact">inquiries</a></h6></div>';
 
     google.maps.event.addListener(northEastSection, 'click', function(event) {
@@ -1978,7 +1876,7 @@ function init() {
     var grainStorageSectionContent = '<div id="grainStorageSection" class="infoWindow">\
         <h5>Open Ground</h5>\
         <h6>5 acres</h6>\
-        <h6>Occupied</h6></div>';
+        <h6>Leased till 2019</h6></div>';
 
     google.maps.event.addListener(grainStorageSection, 'click', function(event) {
         InfoWindow.open(map);
@@ -1987,9 +1885,11 @@ function init() {
     });
     
     var nearSubstationSectionContent = '<div id="nearSubstationSection" class="infoWindow">\
-        <h5>Open ground</h5>\
-        <h6>Approx. 2 acres</h6>\
-        <h6>available</h6>\
+        <h5>+/-2 acres</h5>\
+        <h6>Open ground</h6>\
+        <h6>Available for industrial use</h6>\
+        <h6>Land Lease / Build to suit</h6>\
+        <h6>All or part</h6>\
         <h6><a href="#contact">inquiries</a></h6></div>';
 
     google.maps.event.addListener(nearSubstationSection, 'click', function(event) {
@@ -2000,8 +1900,9 @@ function init() {
     
     var btmDumpSectionContent = '<div id="btmDumpSection" class="infoWindow">\
         <h5>Bottom Dump rail car station</h5>\
-        <h6>elevator</h6>\
-        <h6>dry material transfer</h6>\
+        <h6>Elevator</h6>\
+        <h6>Dry material transfer</h6>\
+        <h6>Available</h6>\
         <h6><a href="#contact">inquiries</a></h6></div>';
 
     google.maps.event.addListener(btmDumpSection, 'click', function(event) {
@@ -2012,8 +1913,8 @@ function init() {
     
     var oilStorContent = '<div id="oilStor" class="infoWindow">\
         <h5>Liquid Storage</h5>\
-        <h6>2 - 1 million Gallon tanks</h6>\
-        <h6>1- 350,000 gallon tank</h6>\
+        <h6>Two - 1 million Gallon tanks</h6>\
+        <h6>One - 350,000 gallon tank</h6>\
         <h6>Rail car access</h6>\
         <h6>Truck access</h6>\
         <h6><a href="#contact">inquiries</a></h6></div>';
@@ -2027,7 +1928,7 @@ function init() {
     var grainElevContent = '<div id="grainElev" class="infoWindow">\
         <h5>Grain Elevator</h5>\
         <h6>75,000 bushel capacity</h6>\
-        <h6>Leased till 2019</h6></div>';
+        <h6>Leased util 2019</h6></div>';
 
     google.maps.event.addListener(grainElev, 'click', function(event) {
         InfoWindow.open(map);
@@ -2043,6 +1944,7 @@ function init() {
         <h6>440 3 phase elec.</h6>\
         <h6>City utilities</h6>\
         <h6>Offices</h6>\
+        <h6>Leased till 2016</h6>\
         <h6><a href="#contact">inquiries</a></h6></div>';
 
     google.maps.event.addListener(bldgP, 'click', function(event) {
@@ -2091,14 +1993,7 @@ function init() {
     });
 
     var bldgKContent = '<div id="bldgK" class="infoWindow">\
-        <h5>Brick warehouse</h5>\
-        <h6>18,439 Square Feet</h6>\
-        <h6>Rail & truck dock</h6>\
-        <h6>Infrared heating</h6>\
-        <h6>440 3 phase elec.</h6>\
-        <h6>City utilities</h6>\
-        <h6>Offices</h6>\
-        <h6><a href="#contact">inquiries</a></h6>\
+        <h5>CSG Maintenance Shop</h5></h6>\
         </div>';
 
     google.maps.event.addListener(bldgK, 'click', function(event) {
